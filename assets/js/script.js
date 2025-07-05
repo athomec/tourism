@@ -3,7 +3,7 @@ $(function () {//JS開頭
 	var WINDOW = $(window).width();//視窗寬度
 	var WINDOWH = $(window).height();//視窗高度
 
-	//字級大小
+	//-------------字級大小
 	$(".js-top-function button").click(function () {
 		if ($(this).hasClass("js-font-sm")) {
 			$("html").addClass("sm");
@@ -16,18 +16,55 @@ $(function () {//JS開頭
 		return false;
 	})
 
-	//menu陰影
+	//-------------menu陰影
+
 	$(window).on('scroll', function () {
-		if ($(window).scrollTop() > 100) {
-			$('.js-nav').addClass('active');
-			$('.js-brand').addClass('active');
-		} else {
-			$('.js-nav').removeClass('active');
-			$('.js-brand').removeClass('active');
+		if ($(window).width() > 992){
+			if ($(window).scrollTop() > 100) {
+				$('.js-nav').addClass('active');
+				$('.js-brand').addClass('active');
+			} else {
+				$('.js-nav').removeClass('active');
+				$('.js-brand').removeClass('active');
+			}
 		}
 	});
 
-	//---------------------側邊選單設定------------------------
+	//-------------下拉選單設定
+	function toggleCollapseOnBreakpoint() {
+		const isDesktop = $(window).width() > 992;
+
+		$('.js-nav .navbar-nav-link').each(function () {
+			const $link = $(this);
+			const toggle = $link.attr('data-bs-toggle');
+			const target = $link.attr('data-bs-target');
+			// 如果有 collapse 行為，就先備份
+			if (!isDesktop && !$link.attr('data-original-toggle') && toggle === 'collapse') {
+				$link.attr('data-original-toggle', toggle);
+				$link.attr('data-original-target', target);
+				$link.attr('data-original-expanded', $link.attr('aria-expanded'));
+			}
+			// 桌機：移除 collapse 行為
+			if (isDesktop && toggle === 'collapse') {
+				$link.removeAttr('data-bs-toggle data-bs-target aria-expanded');
+			}
+			// 手機：還原原始 collapse 屬性
+			if (!isDesktop && $link.attr('data-original-toggle')) {
+				$link.attr('data-bs-toggle', $link.attr('data-original-toggle'));
+				$link.attr('data-bs-target', $link.attr('data-original-target'));
+				$link.attr('aria-expanded', $link.attr('data-original-expanded'));
+			}
+		});
+		// 桌機時把 dropdown 區塊收起來
+		if (isDesktop) {
+			$('.js-nav .navbar-dropdown').removeClass('show').addClass('collapse');
+		}
+	}
+
+	toggleCollapseOnBreakpoint(); // 初始執行
+	$(window).on('resize', toggleCollapseOnBreakpoint); // resize 時自動處理
+
+	//--------------側邊選單設定
 	$(".js-side-menu-toggler").click(function () {//側邊選單收合
 		$(".js-side-menu").toggleClass("close");
 	});
@@ -47,6 +84,22 @@ $(function () {//JS開頭
 	$(window).resize(function () {
 		RESIZE();
 	})
+
+	//---------------全站大圖設定
+	$('.popup-gallery-basic').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+		}
+	});
+
+
+
 
 	//banner滑鼠滑動
 	$('.carousel-inner').on('mousedown', function (e) {

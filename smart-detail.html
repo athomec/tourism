@@ -160,7 +160,7 @@
         <section class="section" data-con="content">
             <div class="row flex-column-reverse flex-lg-row gy-4 gy-lg-0 mb-5">
                 <div class="col-lg-6 col-xl-5">
-                    <div class="row gy-3 gy-lg-4">
+                    <div class="row gy-3 gy-lg-4 align-items-stretch">
                         <div class="col-md-6 col-lg-12">
                             <div class="section-pic"><img src="./assets/images/demo-p6.jpg" alt="草本誠食圖片"></div>
                         </div>
@@ -400,7 +400,6 @@
 <script src="assets/js/script.js"></script><!--自訂-->
 <script>
     $(function () {
-
         //----------------含縮圖輪播
         $('.main-slider').slick({
             slidesToShow: 1,
@@ -430,7 +429,6 @@
             });
         });
         const $buttons = $('.popup-gallery button');
-
         $('.modal-slider').on('afterChange', function (event, slick, currentSlide) {
             const $btn = $buttons.eq(currentSlide);
             const icon = $btn.data('icon');
@@ -438,7 +436,6 @@
             $('.modal-icon').attr('src', icon);
             $('.modal-title').text(title);
         });
-
         $buttons.on('click', function () {
             const index = $(this).index('.popup-gallery button');
             const icon = $(this).data('icon');
@@ -447,7 +444,6 @@
             $('.modal-title').text(title);
             $('.modal-slider').slick('slickGoTo', index);
         });
-
         // slick 切換時：更新 icon/title
         $('.modal-slider').on('afterChange', function (event, slick, currentSlide) {
             const $btn = $buttons.eq(currentSlide);
@@ -455,52 +451,8 @@
             $('.modal-title').text($btn.attr('title'));
         });
 
-        //---------------全站大圖設定
-        $('.popup-gallery-basic').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            tLoading: 'Loading image...',
-            mainClass: 'mfp-img-mobile',
-            gallery: {
-                enabled: true,
-                navigateByImgClick: true,
-                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-            }
-        });
+        
 
-        //-------------下拉選單設定
-        function toggleCollapseOnBreakpoint() {
-            const isDesktop = $(window).width() > 992;
-
-            $('.js-nav .navbar-nav-link').each(function () {
-                const $link = $(this);
-                const toggle = $link.attr('data-bs-toggle');
-                const target = $link.attr('data-bs-target');
-                // 如果有 collapse 行為，就先備份
-                if (!isDesktop && !$link.attr('data-original-toggle') && toggle === 'collapse') {
-                    $link.attr('data-original-toggle', toggle);
-                    $link.attr('data-original-target', target);
-                    $link.attr('data-original-expanded', $link.attr('aria-expanded'));
-                }
-                // 桌機：移除 collapse 行為
-                if (isDesktop && toggle === 'collapse') {
-                    $link.removeAttr('data-bs-toggle data-bs-target aria-expanded');
-                }
-                // 手機：還原原始 collapse 屬性
-                if (!isDesktop && $link.attr('data-original-toggle')) {
-                    $link.attr('data-bs-toggle', $link.attr('data-original-toggle'));
-                    $link.attr('data-bs-target', $link.attr('data-original-target'));
-                    $link.attr('aria-expanded', $link.attr('data-original-expanded'));
-                }
-            });
-            // 桌機時把 dropdown 區塊收起來
-            if (isDesktop) {
-                $('.js-nav .navbar-dropdown').removeClass('show').addClass('collapse');
-            }
-        }
-
-        toggleCollapseOnBreakpoint(); // 初始執行
-        $(window).on('resize', toggleCollapseOnBreakpoint); // resize 時自動處理
 
 
 

@@ -154,7 +154,7 @@
             <div class="modal-header py-2">
                 <img src="./assets/images/approve-logo2.svg" alt="標章logo" class="modal-icon me-2">
                 <h1 class="modal-title fs-5" id="basic-modalLabel">有機農產品標章</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" titie="關閉標章視窗"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" titie="關閉標章視窗"><img src="./assets/images/ic-close.svg" alt="icon"></button>
             </div>
             <div class="modal-body bg-primary-xlight p-0">
                 <div class="modal-slider">
@@ -182,30 +182,35 @@
         <section class="section" data-con="content">
             <div class="row flex-column-reverse flex-lg-row gy-5 gy-lg-0 mb-5">
                 <div class="col-lg-6 col-xl-5">
-                    <a href="#" title="播放影片(開新視窗)" class="section-video mb-4" data-bs-toggle="modal"
-                        data-bs-target="#content_video">
-                        <div class="section-video-action">
-                            <div class="section-video-play shadow-sm position-relative z-2">
-                                <img src="./assets/images/ic-play.svg" alt="播放" class="ms-1">
+                    <div class="row gy-3 gy-xl-4">
+                        <div class="col-md-6 col-lg-12">
+                            <a href="#" title="播放影片(開新視窗)" class="section-video" data-bs-toggle="modal" data-bs-target="#content_video">
+                                <div class="section-video-action">
+                                    <div class="section-video-play shadow-sm position-relative z-2">
+                                        <img src="./assets/images/ic-play.svg" alt="播放" class="ms-1">
+                                    </div>
+                                    <p class="text-primary-dark rounded-pill shadow-sm pe-3 ps-5 py-1 bg-white position-relative z-1">
+                                        VIDEO</p>
+                                </div>
+                                <img src="./assets/images/demo-p2.jpg" alt="影片" class="w-100">
+                            </a>
                             </div>
-                            <p
-                                class="text-primary-dark rounded-pill shadow-sm pe-3 ps-5 py-1 bg-white position-relative z-1">
-                                VIDEO</p>
-                        </div>
-                        <img src="./assets/images/demo-p2.jpg" alt="影片" class="w-100">
-                    </a>
-                    <div class="slider-container">
-                        <div class="main-slider">
-                            <div><img src="./assets/images/demo-p1.jpg" alt="產品1"></div>
-                            <div><img src="./assets/images/demo-p3.jpg" alt="產品2"></div>
-                            <div><img src="./assets/images/demo-p4.jpg" alt="產品3"></div>
-                        </div>
-                        <div class="thumbnail-slider">
-                            <div><img src="./assets/images/demo-p1.jpg" alt="產品1"></div>
-                            <div><img src="./assets/images/demo-p3.jpg" alt="產品2"></div>
-                            <div><img src="./assets/images/demo-p4.jpg" alt="產品3"></div>
-                        </div>
-                    </div>
+                            <div class="col-md-6 col-lg-12">
+                                <div class="slider-container">
+                                    <div class="main-slider">
+                                        <div><img src="./assets/images/demo-p1.jpg" alt="產品1"></div>
+                                        <div><img src="./assets/images/demo-p3.jpg" alt="產品2"></div>
+                                        <div><img src="./assets/images/demo-p4.jpg" alt="產品3"></div>
+                                    </div>
+                                    <div class="thumbnail-slider">
+                                        <div><img src="./assets/images/demo-p1.jpg" alt="產品1"></div>
+                                        <div><img src="./assets/images/demo-p3.jpg" alt="產品2"></div>
+                                        <div><img src="./assets/images/demo-p4.jpg" alt="產品3"></div>
+                                    </div>      </div>
+                            </div>
+                            </div>
+                    
+                    
 
                 </div>
                 <div class="col-lg-6 col-xl-7">
@@ -396,7 +401,6 @@
 <script src="assets/js/script.js"></script><!--自訂-->
 <script>
     $(function () {
-
         //----------------含縮圖輪播
         $('.main-slider').slick({
             slidesToShow: 1,
@@ -426,7 +430,6 @@
             });
         });
         const $buttons = $('.popup-gallery button');
-
         $('.modal-slider').on('afterChange', function (event, slick, currentSlide) {
             const $btn = $buttons.eq(currentSlide);
             const icon = $btn.data('icon');
@@ -434,7 +437,6 @@
             $('.modal-icon').attr('src', icon);
             $('.modal-title').text(title);
         });
-
         $buttons.on('click', function () {
             const index = $(this).index('.popup-gallery button');
             const icon = $(this).data('icon');
@@ -443,7 +445,6 @@
             $('.modal-title').text(title);
             $('.modal-slider').slick('slickGoTo', index);
         });
-
         // slick 切換時：更新 icon/title
         $('.modal-slider').on('afterChange', function (event, slick, currentSlide) {
             const $btn = $buttons.eq(currentSlide);
@@ -451,52 +452,8 @@
             $('.modal-title').text($btn.attr('title'));
         });
 
-        //---------------全站大圖設定
-        $('.popup-gallery-basic').magnificPopup({
-            delegate: 'a',
-            type: 'image',
-            tLoading: 'Loading image...',
-            mainClass: 'mfp-img-mobile',
-            gallery: {
-                enabled: true,
-                navigateByImgClick: true,
-                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-            }
-        });
+        
 
-        //-------------下拉選單設定
-        function toggleCollapseOnBreakpoint() {
-            const isDesktop = $(window).width() > 992;
-
-            $('.js-nav .navbar-nav-link').each(function () {
-                const $link = $(this);
-                const toggle = $link.attr('data-bs-toggle');
-                const target = $link.attr('data-bs-target');
-                // 如果有 collapse 行為，就先備份
-                if (!isDesktop && !$link.attr('data-original-toggle') && toggle === 'collapse') {
-                    $link.attr('data-original-toggle', toggle);
-                    $link.attr('data-original-target', target);
-                    $link.attr('data-original-expanded', $link.attr('aria-expanded'));
-                }
-                // 桌機：移除 collapse 行為
-                if (isDesktop && toggle === 'collapse') {
-                    $link.removeAttr('data-bs-toggle data-bs-target aria-expanded');
-                }
-                // 手機：還原原始 collapse 屬性
-                if (!isDesktop && $link.attr('data-original-toggle')) {
-                    $link.attr('data-bs-toggle', $link.attr('data-original-toggle'));
-                    $link.attr('data-bs-target', $link.attr('data-original-target'));
-                    $link.attr('aria-expanded', $link.attr('data-original-expanded'));
-                }
-            });
-            // 桌機時把 dropdown 區塊收起來
-            if (isDesktop) {
-                $('.js-nav .navbar-dropdown').removeClass('show').addClass('collapse');
-            }
-        }
-
-        toggleCollapseOnBreakpoint(); // 初始執行
-        $(window).on('resize', toggleCollapseOnBreakpoint); // resize 時自動處理
 
 
 
