@@ -157,7 +157,7 @@
 </div>
 <div class="bg-white d-flex">
     <div class="container">
-        <section class="section" data-con="content">
+        <section class="section">
             <div class="row flex-column-reverse flex-lg-row gy-4 gy-lg-0 mb-5">
                 <div class="col-lg-6 col-xl-5">
                     <div class="row gy-3 gy-lg-4 align-items-stretch">
@@ -405,7 +405,7 @@
 <script src="assets/js/script.js"></script><!--自訂-->
 <script>
     $(function () {
-        //----------------含縮圖輪播
+        //----------------輪播
         $('.main-slider').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -422,6 +422,53 @@
             focusOnSelect: true,
             centerPadding: '40px'
         });
+
+        $('.js-product-list').slick({
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 2,
+            rows: 1,
+            dots: false,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 4,
+                        arrows: true,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        rows: 1,
+                        arrows: true,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        rows: 1,
+                        arrows: true,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        rows: 1,
+                        arrows: true,
+                    }
+                }
+            ]
+        });
+
+
 
         //----------------modal大圖輪播
         $('#basic-modal').on('shown.bs.modal', function () {
