@@ -227,16 +227,16 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="popup-gallery d-flex">
-                                        <button class="btn ms-md-auto me-2 p-0" title="台灣優良農產品(開啟標章視窗)" data-bs-toggle="modal" data-bs-target="#basic-modal" data-icon="./assets/images/approve-logo1.svg" data-src="./assets/images/demo-p5.jpg">
+                                        <button class="btn ms-md-auto me-2 p-0" title="台灣優良農產品(開啟圖片視窗)" data-bs-toggle="modal" data-bs-target="#basic-modal" data-icon="./assets/images/approve-logo1.svg" data-src="./assets/images/demo-p5.jpg" data-title="台灣優良農產品">
                                             <img src="./assets/images/approve-logo1.svg" alt="台灣優良農產品">
                                         </button>
-                                        <button class="btn me-2 p-0" title="有機農產品(開啟標章視窗)" data-bs-toggle="modal" data-bs-target="#basic-modal" data-icon="./assets/images/approve-logo2.svg" data-src="./assets/images/demo-p1.jpg">
+                                        <button class="btn me-2 p-0" title="有機農產品(開啟圖片視窗)" data-bs-toggle="modal" data-bs-target="#basic-modal" data-icon="./assets/images/approve-logo2.svg" data-src="./assets/images/demo-p1.jpg" data-title="有機農產品">
                                             <img src="./assets/images/approve-logo2.svg" alt="有機農產品">
                                         </button>
-                                        <button class="btn me-2 p-0" title="產銷履歷農產品(開啟標章視窗)" data-bs-toggle="modal" data-bs-target="#basic-modal" data-icon="./assets/images/approve-logo3.svg" data-src="./assets/images/demo-p2.jpg">
+                                        <button class="btn me-2 p-0" title="產銷履歷農產品(開啟圖片視窗)" data-bs-toggle="modal" data-bs-target="#basic-modal" data-icon="./assets/images/approve-logo3.svg" data-src="./assets/images/demo-p2.jpg" data-title="產銷履歷農產品">
                                             <img src="./assets/images/approve-logo3.svg" alt="產銷履歷農產品" data-src="./assets/images/demo-p2.jpg">
                                         </button>
-                                        <button class="btn me-2 p-0" title="認證(開啟標章視窗)" data-bs-toggle="modal" data-bs-target="#basic-modal" data-icon="./assets/images/approve-logo4.svg" data-src="./assets/images/demo-p4.jpg">
+                                        <button class="btn me-2 p-0" title="認證(開啟圖片視窗)" data-bs-toggle="modal" data-bs-target="#basic-modal" data-icon="./assets/images/approve-logo4.svg" data-src="./assets/images/demo-p4.jpg" data-title="認證">
                                             <img src="./assets/images/approve-logo4.svg" alt="認證" data-src="./assets/images/demo-p3.jpg">
                                         </button>
                                     </div>
@@ -433,14 +433,15 @@
         $('.modal-slider').on('afterChange', function (event, slick, currentSlide) {
             const $btn = $buttons.eq(currentSlide);
             const icon = $btn.data('icon');
-            const title = $btn.attr('title');
+            const title = $btn.data('title');
             $('.modal-icon').attr('src', icon);
             $('.modal-title').text(title);
+            
         });
         $buttons.on('click', function () {
             const index = $(this).index('.popup-gallery button');
             const icon = $(this).data('icon');
-            const title = $(this).attr('title');
+            const title = $(this).data('title');
             $('.modal-icon').attr('src', icon);
             $('.modal-title').text(title);
             $('.modal-slider').slick('slickGoTo', index);
@@ -449,7 +450,7 @@
         $('.modal-slider').on('afterChange', function (event, slick, currentSlide) {
             const $btn = $buttons.eq(currentSlide);
             $('.modal-icon').attr('src', $btn.data('icon'));
-            $('.modal-title').text($btn.attr('title'));
+            $('.modal-title').text($btn.data('title'));
         });
 
         

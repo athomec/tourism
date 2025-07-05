@@ -314,14 +314,15 @@
         $('.modal-slider').on('afterChange', function (event, slick, currentSlide) {
             const $btn = $buttons.eq(currentSlide);
             const icon = $btn.data('icon');
-            const title = $btn.attr('title');
+            const title = $btn.data('title');
             $('.modal-icon').attr('src', icon);
             $('.modal-title').text(title);
+            
         });
         $buttons.on('click', function () {
             const index = $(this).index('.popup-gallery button');
             const icon = $(this).data('icon');
-            const title = $(this).attr('title');
+            const title = $(this).data('title');
             $('.modal-icon').attr('src', icon);
             $('.modal-title').text(title);
             $('.modal-slider').slick('slickGoTo', index);
@@ -330,7 +331,7 @@
         $('.modal-slider').on('afterChange', function (event, slick, currentSlide) {
             const $btn = $buttons.eq(currentSlide);
             $('.modal-icon').attr('src', $btn.data('icon'));
-            $('.modal-title').text($btn.attr('title'));
+            $('.modal-title').text($btn.data('title'));
         });
 
         
