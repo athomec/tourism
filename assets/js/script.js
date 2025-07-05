@@ -80,6 +80,7 @@ $(function () {//JS開頭
 			$('.js-side-menu').removeClass("close");
 			$(".js-side-content").removeClass("close");
 		}
+		toggleCollapseOnBreakpoint();
 	}
 	$(window).resize(function () {
 		RESIZE();

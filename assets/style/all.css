@@ -21267,7 +21267,11 @@ input[readonly] {
       margin-left: 2px; }
 
 .section-title {
-  font-weight: 600; }
+  font-weight: 600;
+  font-size: 1.75rem; }
+  @media (min-width: 1400px) {
+    .section-title {
+      font-size: 2rem; } }
 
 .section-subtitle {
   display: -webkit-box;
