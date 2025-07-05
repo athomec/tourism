@@ -22674,7 +22674,7 @@ a.file-list-item {
     height: 62px;
     left: 0;
     top: -62px;
-    background: url("../images/related-top.svg"); }
+    background: url("../images/related-top.svg") center; }
   .product-title {
     font-family: "Noto Serif TC", serif;
     text-align: center;
@@ -22713,7 +22713,7 @@ a.file-list-item {
     border: 1px solid #FFA200;
     margin-bottom: 8px;
     width: 100%;
-    height: 180px;
+    height: 300px;
     -o-object-fit: cover;
        object-fit: cover; }
     @media (min-width: 576px) {
@@ -22730,14 +22730,25 @@ a.file-list-item {
     display: block; }
   .product-name {
     color: #000; }
+  .product .slick-slider {
+    padding: 0 24px; }
+    @media (min-width: 992px) {
+      .product .slick-slider {
+        padding: 0; } }
   .product .slick-slide {
     padding: 0 8px; }
   .product .slick-arrow {
     top: 40%; }
   .product .slick-next {
-    right: -24px; }
+    right: 0; }
+    @media (min-width: 992px) {
+      .product .slick-next {
+        right: -40px; } }
   .product .slick-prev {
-    left: -24px; }
+    left: 0; }
+    @media (min-width: 992px) {
+      .product .slick-prev {
+        left: -40px; } }
 
 /*無障礙設定*/
 #gotocenter {
