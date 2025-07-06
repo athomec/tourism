@@ -90,7 +90,7 @@ $(function () {//JS開頭
 	$('.popup-gallery-basic').magnificPopup({
 		delegate: 'a',
 		type: 'image',
-		tLoading: 'Loading image...',
+		tLoading: 'Loading...',
 		mainClass: 'mfp-img-mobile',
 		gallery: {
 			enabled: true,
@@ -98,6 +98,33 @@ $(function () {//JS開頭
 			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
 		}
 	});
+
+	$('.js-video').magnificPopup({
+		delegate: 'a',
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: false,
+		iframe: {
+			markup:
+				'<div class="mfp-iframe-scaler">' +
+				'<div class="mfp-close"></div>' +
+				'<iframe class="mfp-iframe" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>' +
+				'</div>',
+			patterns: {
+				youtube: {
+					index: 'youtube.com/',
+					id: function (url) {
+						var match = url.match(/[?&]v=([^&]+)/) || url.match(/embed\/([^?&]+)/);
+						return match ? match[1] : null;
+					},
+					src: 'https://www.youtube.com/embed/%id%?autoplay=1&rel=0'
+				}
+			}
+		}
+	});
+	
 
 
 
