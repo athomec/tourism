@@ -18493,6 +18493,9 @@ input[readonly] {
     .section {
       padding-top: 40px;
       margin-bottom: 96px; } }
+  @media (min-width: 1200px) {
+    .section {
+      margin-bottom: 120px; } }
 
 .container {
   max-width: 95%; }
@@ -21269,12 +21272,23 @@ input[readonly] {
       margin-top: 2px;
       margin-left: 2px; }
 
+.section-tag {
+  background: #FF88A9;
+  color: #fff;
+  border-radius: 20px 20px 0 0;
+  padding: 8px 24px;
+  margin-right: 24px;
+  font-size: 1.2rem;
+  margin-bottom: -12px; }
+
 .section-title {
   font-weight: 600;
   font-size: 1.75rem; }
   @media (min-width: 1400px) {
     .section-title {
       font-size: 2rem; } }
+  .section-title[data-size="small"] {
+    font-size: 1.75rem; }
 
 .section-subtitle {
   display: -webkit-box;
@@ -22765,7 +22779,15 @@ a.file-list-item {
         height: 240px; } }
   .product-link {
     text-align: center;
-    font-weight: 700; }
+    font-weight: 700;
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+    .product-link:hover .product-img {
+      -webkit-transition: all 0.2s ease;
+      -o-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+      border: 1px solid #fff; }
   .product-info {
     color: #9C2546;
     display: block; }
@@ -22790,6 +22812,41 @@ a.file-list-item {
     @media (min-width: 992px) {
       .product .slick-prev {
         left: -40px; } }
+
+.news-card {
+  display: block;
+  border: 1px solid #FFA6CA;
+  border-top: 7px solid #FFA6CA;
+  border-radius: 10px;
+  padding: 32px 24px;
+  text-align: center; }
+  .news-card:hover {
+    background: #FFE5EC; }
+  .news-card-pic {
+    width: 160px;
+    height: 160px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 16px auto; }
+    @media (min-width: 768px) {
+      .news-card-pic {
+        width: 180px;
+        height: 180px; } }
+    @media (min-width: 1200px) {
+      .news-card-pic {
+        width: 200px;
+        height: 200px; } }
+  .news-card-tag {
+    color: #FF4D7D;
+    font-weight: 700;
+    margin-bottom: 8px; }
+    .news-card-tag span {
+      color: #AE864B; }
+  .news-card-title {
+    color: #000;
+    font-size: 1.1rem;
+    margin-bottom: 0; }
 
 /*無障礙設定*/
 #gotocenter {
