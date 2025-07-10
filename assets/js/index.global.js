@@ -2357,9 +2357,9 @@ var FullCalendar = (function (exports) {
                 !compareObjs(this.state, nextState, this.stateEquality);
         }
         // HACK for freakin' React StrictMode
-        safeSetState(newState) {
-            if (!compareObjs(this.state, Object.assign(Object.assign({}, this.state), newState), this.stateEquality)) {
-                this.setState(newState);
+        safeSetState(announcementtate) {
+            if (!compareObjs(this.state, Object.assign(Object.assign({}, this.state), announcementtate), this.stateEquality)) {
+                this.setState(announcementtate);
             }
         }
     }
@@ -3320,12 +3320,12 @@ var FullCalendar = (function (exports) {
         if (instance) {
             let def = eventStore.defs[instance.defId];
             // get events/instances with same group
-            let newStore = filterEventStoreDefs(eventStore, (lookDef) => isEventDefsGrouped(def, lookDef));
+            let announcementtore = filterEventStoreDefs(eventStore, (lookDef) => isEventDefsGrouped(def, lookDef));
             // add the original
             // TODO: wish we could use eventTupleToStore or something like it
-            newStore.defs[def.defId] = def;
-            newStore.instances[instance.instanceId] = instance;
-            return newStore;
+            announcementtore.defs[def.defId] = def;
+            announcementtore.instances[instance.instanceId] = instance;
+            return announcementtore;
         }
         return createEmptyEventStore();
     }
@@ -9005,7 +9005,7 @@ var FullCalendar = (function (exports) {
             let { eventUiSingleBase, selectionConfig } = this.buildViewUiProps(calendarContext); // will memoize obj
             let eventUiBySource = this.buildEventUiBySource(eventSources);
             let eventUiBases = this.buildEventUiBases(renderableEventStore.defs, eventUiSingleBase, eventUiBySource);
-            let newState = {
+            let announcementtate = {
                 dynamicOptionOverrides,
                 currentViewType,
                 currentDate,
@@ -9021,12 +9021,12 @@ var FullCalendar = (function (exports) {
                 eventDrag: reduceEventDrag(state.eventDrag, action),
                 eventResize: reduceEventResize(state.eventResize, action),
             };
-            let contextAndState = Object.assign(Object.assign({}, calendarContext), newState);
+            let contextAndState = Object.assign(Object.assign({}, calendarContext), announcementtate);
             for (let reducer of optionsData.pluginHooks.reducers) {
-                Object.assign(newState, reducer(state, action, contextAndState)); // give the OLD state, for old value
+                Object.assign(announcementtate, reducer(state, action, contextAndState)); // give the OLD state, for old value
             }
             let wasLoading = computeIsLoading(state, calendarContext);
-            let isLoading = computeIsLoading(newState, calendarContext);
+            let isLoading = computeIsLoading(announcementtate, calendarContext);
             // TODO: use propSetHandlers in plugin system
             if (!wasLoading && isLoading) {
                 emitter.trigger('loading', true);
@@ -9034,7 +9034,7 @@ var FullCalendar = (function (exports) {
             else if (wasLoading && !isLoading) {
                 emitter.trigger('loading', false);
             }
-            this.state = newState;
+            this.state = announcementtate;
             if (props.onAction) {
                 props.onAction(action);
             }
@@ -12487,13 +12487,13 @@ var FullCalendar = (function (exports) {
                     }
                 }
                 const oldSegHeights = this.state.segHeights;
-                const newSegHeights = this.querySegHeights();
+                const announcementegHeights = this.querySegHeights();
                 const limitByContentHeight = props.dayMaxEvents === true || props.dayMaxEventRows === true;
                 this.safeSetState({
                     // HACK to prevent oscillations of events being shown/hidden from max-event-rows
                     // Essentially, once you compute an element's height, never null-out.
                     // TODO: always display all events, as visibility:hidden?
-                    segHeights: Object.assign(Object.assign({}, oldSegHeights), newSegHeights),
+                    segHeights: Object.assign(Object.assign({}, oldSegHeights), announcementegHeights),
                     maxContentHeight: limitByContentHeight ? this.computeMaxContentHeight() : null,
                 });
             }

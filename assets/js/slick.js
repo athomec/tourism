@@ -554,9 +554,9 @@
 
     Slick.prototype.buildRows = function() {
 
-        var _ = this, a, b, c, newSlides, numOfSlides, originalSlides,slidesPerSection;
+        var _ = this, a, b, c, announcementlides, numOfSlides, originalSlides,slidesPerSection;
 
-        newSlides = document.createDocumentFragment();
+        announcementlides = document.createDocumentFragment();
         originalSlides = _.$slider.children();
 
         if(_.options.rows > 0) {
@@ -578,10 +578,10 @@
                     }
                     slide.appendChild(row);
                 }
-                newSlides.appendChild(slide);
+                announcementlides.appendChild(slide);
             }
 
-            _.$slider.empty().append(newSlides);
+            _.$slider.empty().append(announcementlides);
             _.$slider.children().children().children()
                 .css({
                     'width':(100 / _.options.slidesPerRow) + '%',
