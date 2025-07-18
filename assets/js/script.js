@@ -124,6 +124,27 @@ $(function () {//JS開頭
 			}
 		}
 	});
+
+	function renderFBPage() {
+		var containerWidth = $('.fb-wrapper').width();
+		$('.fb-page').attr('data-width', containerWidth);
+
+		if (typeof FB !== 'undefined') {
+			FB.XFBML.parse();
+		}
+	}
+
+	// 初始載入執行一次
+	renderFBPage();
+
+	// debounce 避免 resize 太頻繁觸發
+	let resizeTimer;
+	$(window).on('resize', function () {
+		clearTimeout(resizeTimer);
+		resizeTimer = setTimeout(function () {
+			renderFBPage();
+		}, 300); // 延遲 300ms 再執行
+	});
 	
 
 
