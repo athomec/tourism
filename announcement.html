@@ -41,7 +41,7 @@
                 </h1>
             </a>
             <div class="d-flex flex-wrap flex-sm-nowrap ms-auto w-100 justify-content-between">
-                <div class="input-group me-3 mb-2 mb-sm-0">
+                <div class="input-group me-5 me-sm-3 mb-2 mb-sm-0">
                     <input type="text" class="form-control" placeholder="請輸入關鍵字" title="請輸入關鍵字">
                     <button class="btn" type="button" id="search" title="搜尋" onclick="location.href='result.html'">
                         <img src="./assets/images/ic-search.svg" accesskey="S" alt="搜尋 icon">
@@ -70,13 +70,34 @@
                 </ul>
                 <div class="top-btn me-3 me-lg-0">
                     <a href="#" class="top-btn-item btn btn-primary-dark" title="網站導覽">
-                        <img src="./assets/images/ic-sitemap.svg" alt="icon">網站導覽
+                        <img src="./assets/images/ic-sitemap.svg" alt="icon"><span class="d-none d-sm-inline">網站</span>導覽
                     </a>
-                    <a href="#" class="top-btn-item btn btn-primary-dark" title="登入">
+                    <!--登入選單-->
+                    <a href="#"
+                        class="top-btn-item btn btn-primary-dark d-none"
+                        title="登入">
                         <img src="./assets/images/ic-member.svg" alt="icon">登入
                     </a>
+                    <!--已登入資訊-->
+                    <div class="position-relative me-2 me-lg-3 d-flex">
+                        <a href="#top-member-logout" class="top-btn-item btn btn-tertiary px-2 px-md-3 me-0" title="acmdkfs2534" data-bs-toggle="collapse">
+                            <img src="./assets/images/ic-member.svg" alt="icon">acmdkfs2534
+                        </a>
+                        <div id="top-member-logout" class="top-member-dropdown collapse">
+                            <div class="px-2">
+                                <a href="#" title="修改個人資料" class="top-member-btn border-bottom link-gray-600 py-2">
+                                    <img src="./assets/images/ic-edit.svg" alt="icon"><span>修改個人資料</span>
+                                </a>
+                                <a href="#" title="登出" class="top-member-btn link-gray-600 py-2">
+                                    <img src="./assets/images/ic-logout.svg" alt="icon"><span>登出</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="#" class="top-btn-item btn" title="English" data-style="white">
-                        <img src="./assets/images/ic-globe.svg" alt="icon">English
+                        <img src="./assets/images/ic-globe.svg" alt="icon">
+                        <span class="d-none d-md-inline">English</span>
+                        <span class="d-inline d-md-none">EN</span>
                     </a>
                 </div>
             </div>
@@ -86,61 +107,75 @@
             </button>
         </div>
         <div class="collapse navbar-collapse w-100 js-nav" id="navbarCollapse">
-        <ul class="navbar-nav">
-            <li class="d-flex d-xxl-none">
-                <ul class="link-list flex-shrink-0 w-100">
-                    <li class="text-primary-xdark">熱搜：</li>
-                    <li><a class="link-list-link" href="#" title="桃園好米">桃園好米</a></li>
-                    <li><a class="link-list-link" href="#" title="桃園好鮮">桃園好鮮</a></li>
-                    <li><a class="link-list-link" href="#" title="桃園好果">桃園好果</a></li>
-                    <li><a class="link-list-link" href="#" title="桃園好茶">桃園好茶</a></li>
-                    <li><a class="link-list-link" href="#" title="拉拉山">拉拉山</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" title="認識桃園好農" class="navbar-nav-link collapsed">認識桃園好農</a>
-            </li>
-            <li>
-                <a href="market.html" title="優質農產雲市集" class="navbar-nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#dropdown1">
-                    優質農產雲市集
-                    <img src="./assets/images/ic-arrow.svg" alt="icon" class="ms-2">
-                </a>
-                <div id="dropdown1" class="navbar-dropdown accordion-collapse collapse" data-bs-parent=".navbar-nav">
-                    <ul>
-                        <li><a href="market.html" class="navbar-dropdown-link"title="優質農產雲市集">優質農產雲市集</a></li>
-                        <li><a href="news.html" class="navbar-dropdown-link"title="農產雲市集">最新消息</a></li>
-                        <li><a href="market.html" class="navbar-dropdown-link"title="優質農產雲市集">優質農產雲市集</a></li>
-                        <li><a href="market.html" class="navbar-dropdown-link"title="農產雲市集">農產雲市集</a></li>
+            <ul class="navbar-nav">
+                <li class="d-flex d-xxl-none">
+                    <ul class="link-list flex-shrink-0 w-100">
+                        <li class="text-primary-xdark">熱搜：</li>
+                        <li><a class="link-list-link" href="#" title="桃園好米">桃園好米</a></li>
+                        <li><a class="link-list-link" href="#" title="桃園好鮮">桃園好鮮</a></li>
+                        <li><a class="link-list-link" href="#" title="桃園好果">桃園好果</a></li>
+                        <li><a class="link-list-link" href="#" title="桃園好茶">桃園好茶</a></li>
+                        <li><a class="link-list-link" href="#" title="拉拉山">拉拉山</a></li>
                     </ul>
-                </div>
-            </li>
-            <li>
-                <a href="smart-detail.html" title="智慧農業場域" class="navbar-nav-link collapsed">智慧農業場域</a>
-            </li>
-            <li>
-                <a href="#" title="好農專區" class="navbar-nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#dropdown2">
-                    好農專區
-                    <img src="./assets/images/ic-arrow.svg" alt="icon" class="ms-2">
-                </a>
-                <div id="dropdown2" class="navbar-dropdown accordion-collapse collapse" data-bs-parent=".navbar-nav">
-                    <ul>
-                        <li><a href="ranking.html" class="navbar-dropdown-link" title="青農風雲榜">青農風雲榜</a></li>
-                        <li><a href="announcement.html" class="navbar-dropdown-link" title="新聞發布">新聞發布</a></li>
-                        <li><a href="#" class="navbar-dropdown-link" title="好農好農好農">好農好農好農</a></li>
-                        <li><a href="#" class="navbar-dropdown-link" title="好農好農">好農好農</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="#" title="青農地圖" class="navbar-nav-link collapsed">青農地圖</a>
-            </li>
-            <li>
-                <a href="#" title="宣傳品下載" class="navbar-nav-link collapsed">宣傳品下載</a>
-            </li>
-        </ul>
-    </div>
+                </li>
+                <li>
+                    <a href="#" title="認識桃園好農" class="navbar-nav-link collapsed">認識桃園好農</a>
+                </li>
+                <li>
+                    <a href="market.html" title="優質農產雲市集" class="navbar-nav-link collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#dropdown1">
+                        優質農產雲市集
+                        <img src="./assets/images/ic-arrow.svg" alt="icon" class="ms-2">
+                    </a>
+                    <div id="dropdown1" class="navbar-dropdown accordion-collapse collapse"
+                        data-bs-parent=".navbar-nav">
+                        <ul>
+                            <li><a href="market.html" class="navbar-dropdown-link" title="優質農產雲市集">優質農產雲市集</a></li>
+                            <li><a href="news.html" class="navbar-dropdown-link" title="農產雲市集">最新消息</a></li>
+                            <li><a href="market.html" class="navbar-dropdown-link" title="優質農產雲市集">優質農產雲市集</a></li>
+                            <li><a href="market.html" class="navbar-dropdown-link" title="農產雲市集">農產雲市集</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="smart-detail.html" title="智慧農業場域" class="navbar-nav-link collapsed">智慧農業場域</a>
+                </li>
+                <li>
+                    <a href="#" title="好農專區" class="navbar-nav-link collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#dropdown2">
+                        好農專區
+                        <img src="./assets/images/ic-arrow.svg" alt="icon" class="ms-2">
+                    </a>
+                    <div id="dropdown2" class="navbar-dropdown accordion-collapse collapse"
+                        data-bs-parent=".navbar-nav">
+                        <ul>
+                            <li><a href="ranking.html" class="navbar-dropdown-link" title="青農風雲榜">青農風雲榜</a></li>
+                            <li><a href="announcement.html" class="navbar-dropdown-link" title="新聞發布">新聞發布</a></li>
+                            <li><a href="#" class="navbar-dropdown-link" title="好農好農好農">好農好農好農</a></li>
+                            <li><a href="#" class="navbar-dropdown-link" title="好農好農">好農好農</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" title="好農地圖" class="navbar-nav-link collapsed">好農地圖</a>
+                </li>
+                <li>
+                    <a href="#" title="宣傳品下載" class="navbar-nav-link collapsed">宣傳品下載</a>
+                </li>
+                <li class="position-static">
+                    <div class="shop-btn js-shop">
+                        <a href="#" class="shop-btn-item btn" title="購物車">
+                            <img src="./assets/images/ic-cart-ol.svg" alt="icon"><span>購物車</span>
+                        </a>
+                        <a href="#" class="shop-btn-item btn" title="收藏商品">
+                            <img src="./assets/images/ic-like.svg" alt="icon"><span>收藏商品</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </nav>
-    
+
 </header>
 <!--主選單結束-->
 				<a href="#Accesskey_C" class="key position-absolute" id="Accesskey_C" accesskey="C"
@@ -278,7 +313,7 @@
                     </div>
                     <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl">
                         <ul class="footer-list">
-                            <li class="footer-list-item"><a href="#" class="footer-list-link" title="青農地圖">青農地圖</a>
+                            <li class="footer-list-item"><a href="#" class="footer-list-link" title="好農地圖">好農地圖</a>
                             </li>
                         </ul>
                     </div>

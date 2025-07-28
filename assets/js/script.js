@@ -23,9 +23,11 @@ $(function () {//JS開頭
 			if ($(window).scrollTop() > 100) {
 				$('.js-nav').addClass('active');
 				$('.js-brand').addClass('active');
+				$('.js-shop').addClass('active');
 			} else {
 				$('.js-nav').removeClass('active');
 				$('.js-brand').removeClass('active');
+				$('.js-shop').removeClass('active');
 			}
 		}
 	});

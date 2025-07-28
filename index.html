@@ -41,7 +41,7 @@
                 </h1>
             </a>
             <div class="d-flex flex-wrap flex-sm-nowrap ms-auto w-100 justify-content-between">
-                <div class="input-group me-3 mb-2 mb-sm-0">
+                <div class="input-group me-5 me-sm-3 mb-2 mb-sm-0">
                     <input type="text" class="form-control" placeholder="請輸入關鍵字" title="請輸入關鍵字">
                     <button class="btn" type="button" id="search" title="搜尋" onclick="location.href='result.html'">
                         <img src="./assets/images/ic-search.svg" accesskey="S" alt="搜尋 icon">
@@ -70,13 +70,34 @@
                 </ul>
                 <div class="top-btn me-3 me-lg-0">
                     <a href="#" class="top-btn-item btn btn-primary-dark" title="網站導覽">
-                        <img src="./assets/images/ic-sitemap.svg" alt="icon">網站導覽
+                        <img src="./assets/images/ic-sitemap.svg" alt="icon"><span class="d-none d-sm-inline">網站</span>導覽
                     </a>
-                    <a href="#" class="top-btn-item btn btn-primary-dark" title="登入">
+                    <!--登入選單-->
+                    <a href="#"
+                        class="top-btn-item btn btn-primary-dark d-flex"
+                        title="登入">
                         <img src="./assets/images/ic-member.svg" alt="icon">登入
                     </a>
+                    <!--已登入資訊-->
+                    <div class="position-relative me-2 me-lg-3 d-none">
+                        <a href="#top-member-logout" class="top-btn-item btn btn-tertiary px-2 px-md-3 me-0" title="acmdkfs2534" data-bs-toggle="collapse">
+                            <img src="./assets/images/ic-member.svg" alt="icon">acmdkfs2534
+                        </a>
+                        <div id="top-member-logout" class="top-member-dropdown collapse">
+                            <div class="px-2">
+                                <a href="#" title="修改個人資料" class="top-member-btn border-bottom link-gray-600 py-2">
+                                    <img src="./assets/images/ic-edit.svg" alt="icon"><span>修改個人資料</span>
+                                </a>
+                                <a href="#" title="登出" class="top-member-btn link-gray-600 py-2">
+                                    <img src="./assets/images/ic-logout.svg" alt="icon"><span>登出</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="#" class="top-btn-item btn" title="English" data-style="white">
-                        <img src="./assets/images/ic-globe.svg" alt="icon">English
+                        <img src="./assets/images/ic-globe.svg" alt="icon">
+                        <span class="d-none d-md-inline">English</span>
+                        <span class="d-inline d-md-none">EN</span>
                     </a>
                 </div>
             </div>
@@ -86,61 +107,75 @@
             </button>
         </div>
         <div class="collapse navbar-collapse w-100 js-nav" id="navbarCollapse">
-        <ul class="navbar-nav">
-            <li class="d-flex d-xxl-none">
-                <ul class="link-list flex-shrink-0 w-100">
-                    <li class="text-primary-xdark">熱搜：</li>
-                    <li><a class="link-list-link" href="#" title="桃園好米">桃園好米</a></li>
-                    <li><a class="link-list-link" href="#" title="桃園好鮮">桃園好鮮</a></li>
-                    <li><a class="link-list-link" href="#" title="桃園好果">桃園好果</a></li>
-                    <li><a class="link-list-link" href="#" title="桃園好茶">桃園好茶</a></li>
-                    <li><a class="link-list-link" href="#" title="拉拉山">拉拉山</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" title="認識桃園好農" class="navbar-nav-link collapsed">認識桃園好農</a>
-            </li>
-            <li>
-                <a href="market.html" title="優質農產雲市集" class="navbar-nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#dropdown1">
-                    優質農產雲市集
-                    <img src="./assets/images/ic-arrow.svg" alt="icon" class="ms-2">
-                </a>
-                <div id="dropdown1" class="navbar-dropdown accordion-collapse collapse" data-bs-parent=".navbar-nav">
-                    <ul>
-                        <li><a href="market.html" class="navbar-dropdown-link"title="優質農產雲市集">優質農產雲市集</a></li>
-                        <li><a href="news.html" class="navbar-dropdown-link"title="農產雲市集">最新消息</a></li>
-                        <li><a href="market.html" class="navbar-dropdown-link"title="優質農產雲市集">優質農產雲市集</a></li>
-                        <li><a href="market.html" class="navbar-dropdown-link"title="農產雲市集">農產雲市集</a></li>
+            <ul class="navbar-nav">
+                <li class="d-flex d-xxl-none">
+                    <ul class="link-list flex-shrink-0 w-100">
+                        <li class="text-primary-xdark">熱搜：</li>
+                        <li><a class="link-list-link" href="#" title="桃園好米">桃園好米</a></li>
+                        <li><a class="link-list-link" href="#" title="桃園好鮮">桃園好鮮</a></li>
+                        <li><a class="link-list-link" href="#" title="桃園好果">桃園好果</a></li>
+                        <li><a class="link-list-link" href="#" title="桃園好茶">桃園好茶</a></li>
+                        <li><a class="link-list-link" href="#" title="拉拉山">拉拉山</a></li>
                     </ul>
-                </div>
-            </li>
-            <li>
-                <a href="smart-detail.html" title="智慧農業場域" class="navbar-nav-link collapsed">智慧農業場域</a>
-            </li>
-            <li>
-                <a href="#" title="好農專區" class="navbar-nav-link collapsed" data-bs-toggle="collapse" data-bs-target="#dropdown2">
-                    好農專區
-                    <img src="./assets/images/ic-arrow.svg" alt="icon" class="ms-2">
-                </a>
-                <div id="dropdown2" class="navbar-dropdown accordion-collapse collapse" data-bs-parent=".navbar-nav">
-                    <ul>
-                        <li><a href="ranking.html" class="navbar-dropdown-link" title="青農風雲榜">青農風雲榜</a></li>
-                        <li><a href="announcement.html" class="navbar-dropdown-link" title="新聞發布">新聞發布</a></li>
-                        <li><a href="#" class="navbar-dropdown-link" title="好農好農好農">好農好農好農</a></li>
-                        <li><a href="#" class="navbar-dropdown-link" title="好農好農">好農好農</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="#" title="青農地圖" class="navbar-nav-link collapsed">青農地圖</a>
-            </li>
-            <li>
-                <a href="#" title="宣傳品下載" class="navbar-nav-link collapsed">宣傳品下載</a>
-            </li>
-        </ul>
-    </div>
+                </li>
+                <li>
+                    <a href="#" title="認識桃園好農" class="navbar-nav-link collapsed">認識桃園好農</a>
+                </li>
+                <li>
+                    <a href="market.html" title="優質農產雲市集" class="navbar-nav-link collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#dropdown1">
+                        優質農產雲市集
+                        <img src="./assets/images/ic-arrow.svg" alt="icon" class="ms-2">
+                    </a>
+                    <div id="dropdown1" class="navbar-dropdown accordion-collapse collapse"
+                        data-bs-parent=".navbar-nav">
+                        <ul>
+                            <li><a href="market.html" class="navbar-dropdown-link" title="優質農產雲市集">優質農產雲市集</a></li>
+                            <li><a href="news.html" class="navbar-dropdown-link" title="農產雲市集">最新消息</a></li>
+                            <li><a href="market.html" class="navbar-dropdown-link" title="優質農產雲市集">優質農產雲市集</a></li>
+                            <li><a href="market.html" class="navbar-dropdown-link" title="農產雲市集">農產雲市集</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="smart-detail.html" title="智慧農業場域" class="navbar-nav-link collapsed">智慧農業場域</a>
+                </li>
+                <li>
+                    <a href="#" title="好農專區" class="navbar-nav-link collapsed" data-bs-toggle="collapse"
+                        data-bs-target="#dropdown2">
+                        好農專區
+                        <img src="./assets/images/ic-arrow.svg" alt="icon" class="ms-2">
+                    </a>
+                    <div id="dropdown2" class="navbar-dropdown accordion-collapse collapse"
+                        data-bs-parent=".navbar-nav">
+                        <ul>
+                            <li><a href="ranking.html" class="navbar-dropdown-link" title="青農風雲榜">青農風雲榜</a></li>
+                            <li><a href="announcement.html" class="navbar-dropdown-link" title="新聞發布">新聞發布</a></li>
+                            <li><a href="#" class="navbar-dropdown-link" title="好農好農好農">好農好農好農</a></li>
+                            <li><a href="#" class="navbar-dropdown-link" title="好農好農">好農好農</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" title="好農地圖" class="navbar-nav-link collapsed">好農地圖</a>
+                </li>
+                <li>
+                    <a href="#" title="宣傳品下載" class="navbar-nav-link collapsed">宣傳品下載</a>
+                </li>
+                <li class="position-static">
+                    <div class="shop-btn js-shop">
+                        <a href="#" class="shop-btn-item btn" title="購物車">
+                            <img src="./assets/images/ic-cart-ol.svg" alt="icon"><span>購物車</span>
+                        </a>
+                        <a href="#" class="shop-btn-item btn" title="收藏商品">
+                            <img src="./assets/images/ic-like.svg" alt="icon"><span>收藏商品</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </nav>
-    
+
 </header>
 <!--主選單結束-->
 				<a href="#Accesskey_C" class="key position-absolute" id="Accesskey_C" accesskey="C"
@@ -150,29 +185,28 @@
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous"
 	src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v23.0&appId=2357321167852272">
-</script>
+	</script>
 
 <!--內容區塊開始-->
 <div style="min-height: 300px;">
 	<div class="banner">
 		<div class="banner-top"><img src="./assets/images/banner-top.png" alt="插圖"></div>
+		<div class="banner-info"><span class="text-primary">桃園最香甜的桃子</span>富含豐富水份，香味濃郁，果肉柔嫩</div>
 		<div class="banner-slide js-banner">
 			<div>
 				<a href="#" class="banner-link" title="桃園拉拉山水蜜桃季">
 					<div class="banner-img"><img src="./assets/images/banner-img.jpg" alt="桃園拉拉山水蜜桃季"></div>
-					<div class="banner-info"><span class="text-primary">桃園最香甜的桃子</span>富含豐富水份，香味濃郁，果肉柔嫩</div>
+
 				</a>
 			</div>
 			<div>
 				<a href="#" class="banner-link" title="大溪水岸花卉農遊">
 					<div class="banner-img"><img src="./assets/images/banner-img1.jpg" alt="大溪水岸花卉農遊"></div>
-					<div class="banner-info"><span class="text-primary">花彩盛艷</span>隨季節綻放的各色花卉，如同時空的魔術師</div>
 				</a>
 			</div>
 			<div>
 				<a href="#" class="banner-link" title="大溪水岸花卉農遊">
 					<div class="banner-img"><img src="./assets/images/banner-img2.jpg" alt="桃園最有「星味」的休閒農場"></div>
-					<div class="banner-info"><span class="text-primary">綺麗玩色</span>打卡極唯美四季花田</div>
 				</a>
 			</div>
 		</div>
@@ -211,11 +245,11 @@
 	</div>
 	<section class="section container d-flex flex-column">
 		<h2 class="section-home-title">最新消息<span>NEWS</span></h2>
-		<div class="d-flex flex-column flex-md-row align-items-center align-items-md-start">
-			<div class="fb-wrapper mb-4 mb-md-0 me-md-4 me-lg-5">
-				<div class="fb-page" data-href="https://www.facebook.com/AgricultureInTaoyuan" data-tabs="timeline" data-width=""
-					data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false"
-					data-show-facepile="false">
+		<div class="d-flex flex-column flex-lg-row align-items-center align-items-lg-start">
+			<div class="fb-wrapper mb-4 mb-lg-0 me-md-4 me-lg-5">
+				<div class="fb-page" data-href="https://www.facebook.com/AgricultureInTaoyuan" data-tabs="timeline"
+					data-width="" data-height="" data-small-header="true" data-adapt-container-width="true"
+					data-hide-cover="false" data-show-facepile="false">
 					<blockquote cite="https://www.facebook.com/AgricultureInTaoyuan" class="fb-xfbml-parse-ignore"><a
 							href="https://www.facebook.com/AgricultureInTaoyuan">桃園好農</a></blockquote>
 				</div>
@@ -229,107 +263,118 @@
 							type="button" role="tab">好農快報</button>
 					</div>
 				</nav>
-				<div class="tab-content px-4 px-xl-5 py-3 py-xl-4" id="nav-tabContent">
+				<div class="tab-content" id="nav-tabContent">
 					<div class="tab-pane fade show active" id="news1" role="tabpanel" tabindex="0">
-						<ul class="home-news-list mb-3">
-							<li>
-								<a href="#" title="標題標題" class="home-news-link">
-									<span>2025/12/12</span>
-									<p>蛇馬龍舞【2025桃園農產月曆】🎉歡迎所有熱愛桃園的朋友們下載喔~</p>
+						<div class="bg-primary-xxxlight px-4 px-xl-5 py-3 py-xl-4">
+							<ul class="home-news-list mb-3">
+								<li>
+									<a href="#" title="標題標題" class="home-news-link">
+										<span>2025/12/12</span>
+										<p>蛇馬龍舞【2025桃園農產月曆】🎉歡迎所有熱愛桃園的朋友們下載喔~</p>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="標題標題" class="home-news-link">
+										<span>2025/12/12</span>
+										<p>桃園黑豬美味入年菜-在家就能享用五星黑豬年菜</p>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="標題標題" class="home-news-link">
+										<span>2025/12/12</span>
+										<p>蛇馬龍舞【2025桃園農產月曆】🎉歡迎所有熱愛桃園的朋友們下載喔~</p>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="標題標題" class="home-news-link">
+										<span>2025/12/12</span>
+										<p>拉拉山水蜜桃變思樂冰！張市長推廣「桃園好農」品牌結盟超商通路銷售全臺</p>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="標題標題" class="home-news-link">
+										<span>2025/12/12</span>
+										<p>桃園黑豬美味入年菜-在家就能享用五星黑豬年菜</p>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="標題標題" class="home-news-link">
+										<span>2025/12/12</span>
+										<p>蛇馬龍舞【2025桃園農產月曆】🎉歡迎所有熱愛桃園的朋友們下載喔~</p>
+									</a>
+								</li>
+								<li>
+									<a href="#" title="標題標題" class="home-news-link">
+										<span>2025/12/12</span>
+										<p>拉拉山水蜜桃變思樂冰！張市長推廣「桃園好農」品牌結盟超商通路銷售全臺</p>
+									</a>
+								</li>
+							</ul>
+							<div class="d-flex justify-content-end">
+								<a href="#" title="more" class="section-more ms-auto">
+									more <img src="./assets/images/ic-more-arrow.svg" alt="icon" class="ms-1">
 								</a>
-							</li>
-							<li>
-								<a href="#" title="標題標題" class="home-news-link">
-									<span>2025/12/12</span>
-									<p>桃園黑豬美味入年菜-在家就能享用五星黑豬年菜</p>
-								</a>
-							</li>
-							<li>
-								<a href="#" title="標題標題" class="home-news-link">
-									<span>2025/12/12</span>
-									<p>蛇馬龍舞【2025桃園農產月曆】🎉歡迎所有熱愛桃園的朋友們下載喔~</p>
-								</a>
-							</li>
-							<li>
-								<a href="#" title="標題標題" class="home-news-link">
-									<span>2025/12/12</span>
-									<p>拉拉山水蜜桃變思樂冰！張市長推廣「桃園好農」品牌結盟超商通路銷售全臺</p>
-								</a>
-							</li>
-							<li>
-								<a href="#" title="標題標題" class="home-news-link">
-									<span>2025/12/12</span>
-									<p>桃園黑豬美味入年菜-在家就能享用五星黑豬年菜</p>
-								</a>
-							</li>
-							<li>
-								<a href="#" title="標題標題" class="home-news-link">
-									<span>2025/12/12</span>
-									<p>蛇馬龍舞【2025桃園農產月曆】🎉歡迎所有熱愛桃園的朋友們下載喔~</p>
-								</a>
-							</li>
-							<li>
-								<a href="#" title="標題標題" class="home-news-link">
-									<span>2025/12/12</span>
-									<p>拉拉山水蜜桃變思樂冰！張市長推廣「桃園好農」品牌結盟超商通路銷售全臺</p>
-								</a>
-							</li>
-						</ul>
-						<div class="d-flex justify-content-end">
-							<a href="#" title="more" class="section-more ms-auto">
-								more <img src="./assets/images/ic-more-arrow.svg" alt="icon" class="ms-1">
-							</a>
+							</div>
 						</div>
 					</div>
-					<div class="tab-pane fade" id="news2" role="tabpanel" tabindex="0">
-						<ul class="home-news-list mb-3">
-							<li>
-								<a href="#" title="標題標題" class="home-news-link">
-									<span>2025/12/12</span>
-									<p>蛇馬龍舞【2025桃園農產月曆】🎉歡迎所有熱愛桃園的朋友們下載喔~</p>
+					<div class="tab-pane fade bg-secondary-light" id="news2" role="tabpanel" tabindex="0">
+						<div class="bg-secondary-xlight px-4 px-xl-5 py-3 py-xl-4">
+							<ul class="news mb-3 pb-2">
+								<li>
+									<a href="news-detail.html" class="news-link" title="標題標題">
+										<div class="news-tag bg-primary-xlight text-primary-dark">熱門活動</div>
+										<span class="news-info">2025/12/12</span>
+										<p class="news-title">2024 大溪水岸花卉農遊 集點送好禮 11/16~11/24</p>
+									</a>
+								</li>
+								<li>
+									<a href="news-detail.html" class="news-link" title="標題標題">
+										<div class="news-tag bg-bright-dark text-secondary-dark">好康資訊</div>
+										<span class="news-info">2025/12/12</span>
+										<p class="news-title">媽媽樂桃桃 好農Go Go購！復興媽媽桃不用上山也能買到！</p>
+									</a>
+								</li>
+								<li>
+									<a href="news-detail.html" class="news-link" title="標題標題">
+										<div class="news-tag bg-quaternary-light text-quaternary">促銷資訊</div>
+										<span class="news-info">2025/12/12</span>
+										<p class="news-title">溪海花卉農遊趣「花間遊記」</p>
+									</a>
+								</li>
+								<li>
+									<a href="news-detail.html" class="news-link" title="標題標題">
+										<div class="news-tag bg-primary-xlight text-primary-dark">熱門活動</div>
+										<span class="news-info">2025/12/12</span>
+										<p class="news-title">在7-11全台門市推出「拉拉山水蜜桃爆爆珠」搭配桃園好農聯名「水蜜桃風味思樂冰」</p>
+									</a>
+								</li>
+								<li>
+									<a href="news-detail.html" class="news-link" title="標題標題">
+										<div class="news-tag bg-primary-xlight text-primary-dark">熱門活動</div>
+										<span class="news-info">2025/12/12</span>
+										<p class="news-title">2024 大溪水岸花卉農遊 集點送好禮 11/16~11/24</p>
+									</a>
+								</li>
+								<li>
+									<a href="news-detail.html" class="news-link" title="標題標題">
+										<div class="news-tag bg-bright-dark text-secondary-dark">好康資訊</div>
+										<span class="news-info">2025/12/12</span>
+										<p class="news-title">媽媽樂桃桃 好農Go Go購！復興媽媽桃不用上山也能買到！</p>
+									</a>
+								</li>
+								<li>
+									<a href="news-detail.html" class="news-link" title="標題標題">
+										<div class="news-tag bg-quaternary-light text-quaternary">促銷資訊</div>
+										<span class="news-info">2025/12/12</span>
+										<p class="news-title">溪海花卉農遊趣「花間遊記」</p>
+									</a>
+								</li>
+							</ul>
+							<div class="d-flex justify-content-end">
+								<a href="#" title="more" class="section-more ms-auto">
+									more <img src="./assets/images/ic-more-arrow.svg" alt="icon" class="ms-1">
 								</a>
-							</li>
-							<li>
-								<a href="#" title="標題標題" class="home-news-link">
-									<span>2025/12/12</span>
-									<p>桃園黑豬美味入年菜-在家就能享用五星黑豬年菜</p>
-								</a>
-							</li>
-							<li>
-								<a href="#" title="標題標題" class="home-news-link">
-									<span>2025/12/12</span>
-									<p>蛇馬龍舞【2025桃園農產月曆】🎉歡迎所有熱愛桃園的朋友們下載喔~</p>
-								</a>
-							</li>
-							<li>
-								<a href="#" title="標題標題" class="home-news-link">
-									<span>2025/12/12</span>
-									<p>拉拉山水蜜桃變思樂冰！張市長推廣「桃園好農」品牌結盟超商通路銷售全臺</p>
-								</a>
-							</li>
-							<li>
-								<a href="#" title="標題標題" class="home-news-link">
-									<span>2025/12/12</span>
-									<p>桃園黑豬美味入年菜-在家就能享用五星黑豬年菜</p>
-								</a>
-							</li>
-							<li>
-								<a href="#" title="標題標題" class="home-news-link">
-									<span>2025/12/12</span>
-									<p>蛇馬龍舞【2025桃園農產月曆】🎉歡迎所有熱愛桃園的朋友們下載喔~</p>
-								</a>
-							</li>
-							<li>
-								<a href="#" title="標題標題" class="home-news-link">
-									<span>2025/12/12</span>
-									<p>拉拉山水蜜桃變思樂冰！張市長推廣「桃園好農」品牌結盟超商通路銷售全臺</p>
-								</a>
-							</li>
-						</ul>
-						<div class="d-flex justify-content-end">
-							<a href="#" title="more" class="section-more ms-auto">
-								more <img src="./assets/images/ic-more-arrow.svg" alt="icon" class="ms-1">
-							</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -826,7 +871,7 @@
                     </div>
                     <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl">
                         <ul class="footer-list">
-                            <li class="footer-list-item"><a href="#" class="footer-list-link" title="青農地圖">青農地圖</a>
+                            <li class="footer-list-item"><a href="#" class="footer-list-link" title="好農地圖">好農地圖</a>
                             </li>
                         </ul>
                     </div>

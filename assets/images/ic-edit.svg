@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="ic-edit" transform="translate(-2325 -48)">
+    <g id="pencil-square_1_" data-name="pencil-square (1)" transform="translate(2326 49.5)">
+      <path id="Path_9233" data-name="Path 9233" d="M18.134,2.27a.614.614,0,0,1,0,.868L16.852,4.42,14.395,1.962,15.676.68a.614.614,0,0,1,.869,0l1.589,1.589Zm-2.15,3.018L13.526,2.83,5.154,11.2a.614.614,0,0,0-.149.241l-.989,2.966A.307.307,0,0,0,4.4,14.8l2.966-.989a.614.614,0,0,0,.241-.147l8.372-8.373Z" transform="translate(0.687 0)" fill="#ffa200"/>
+      <path id="Path_9234" data-name="Path 9234" d="M1,16.361A1.843,1.843,0,0,0,2.843,18.2H16.361A1.843,1.843,0,0,0,18.2,16.361V8.987a.614.614,0,0,0-1.229,0v7.373a.614.614,0,0,1-.614.614H2.843a.614.614,0,0,1-.614-.614V2.843a.614.614,0,0,1,.614-.614h7.987a.614.614,0,1,0,0-1.229H2.843A1.843,1.843,0,0,0,1,2.843Z" transform="translate(0 0.115)" fill="#ffa200" fill-rule="evenodd"/>
+    </g>
+    <rect id="Rectangle_880" data-name="Rectangle 880" width="22" height="22" transform="translate(2325 48)" fill="none"/>
+  </g>
+</svg>

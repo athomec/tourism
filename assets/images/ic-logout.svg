@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+  <g id="ic-logout" transform="translate(-2324 -95)">
+    <g id="login_black_24dp" transform="translate(2324 95)">
+      <g id="Group_228" data-name="Group 228">
+        <rect id="Rectangle_229" data-name="Rectangle 229" width="22" height="22" fill="none"/>
+      </g>
+      <g id="Group_229" data-name="Group 229" transform="translate(1.796 2.694)">
+        <path id="Path_125" data-name="Path 125" d="M10.082,6.592,8.825,7.849l2.335,2.335H2v1.8h9.159L8.825,14.314l1.257,1.257,4.49-4.49Zm8.082,10.776H10.98v1.8h7.184a1.8,1.8,0,0,0,1.8-1.8V4.8a1.8,1.8,0,0,0-1.8-1.8H10.98V4.8h7.184Z" transform="translate(-2 -3)" fill="#ffa200"/>
+      </g>
+    </g>
+    <rect id="Rectangle_881" data-name="Rectangle 881" width="22" height="22" transform="translate(2324 95)" fill="none"/>
+  </g>
+</svg>
