@@ -32,6 +32,11 @@ $(function () {//JS開頭
 		}
 	});
 
+	//-------------toogle-----------
+	$(".js-toggle-btn").click(function (){
+		$(this).toggleClass(".active");
+	})
+
 	//-------------下拉選單設定
 	function toggleCollapseOnBreakpoint() {
 		const isDesktop = $(window).width() > 992;

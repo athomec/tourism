@@ -594,67 +594,6 @@
         });
 
 
-
-
-
-
-
-
-        //首頁輪播
-        $('.js-theme-card').slick({
-            speed: 300,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            rows: 1,
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        rows: 1,
-                        dots: true,
-                        arrows: false,
-                    }
-                }
-            ]
-        });
-        //申辦服務輪播
-        $('.js-choose-service').slick({
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            rows: 2,
-            dots: true,
-            responsive: [
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 2,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        rows: 3,
-                        dots: true
-                    }
-                }
-            ]
-        });
-        //預約輪播
         RESIZE();
 
         function RESIZE() {
@@ -685,9 +624,6 @@
         $(window).resize(function () {
             RESIZE();
         })
-
-        //下拉輸入選單
-        $('.js-input-select').select2();
 
         //時間表單
         var datetimepickerOptions = {
@@ -731,120 +667,7 @@
         var today1 = moment(); // 第一個今天的日期
         var today2 = moment(); // 第二個今天的日期
 
-
-        //自動開啟完成視窗
-        const myModalEl = document.getElementById('done');
-        setTimeout(function () {
-            const bsModal = new bootstrap.Modal(myModalEl);
-            bsModal.show();
-        }, 2000);
     });
-</script>
-<script>
-    //行事曆設定
-    document.addEventListener('DOMContentLoaded', function () {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            locale: 'zh-tw',//中文設定
-            buttonText: {
-                today: '今天',
-                month: '月',
-                week: '周',
-                day: '日',
-            },
-            headerToolbar: {
-                left: 'prev,next today',
-                center: 'title',
-                right: 'dayGridMonth,dayGridWeek,dayGridDay'
-            },
-            initialDate: '2023-10-12',
-            navLinks: true, // can click day/week names to navigate views
-            editable: true,
-            dayMaxEvents: true, // allow "more" link when too many events
-            events: [
-                {
-                    title: '未開放預約',
-                    start: '2023-10-09T13:30:00',
-                    display: 'block',
-                    borderColor: '#746D6D',
-                    backgroundColor: '#746D6D'
-                },
-                {
-                    title: '已結束預約',
-                    start: '2023-10-03T20:30:00',
-                    display: 'block',
-                    borderColor: '#746D6D',
-                    backgroundColor: '#746D6D'
-                },
-                {
-                    title: '可預約',
-                    start: '2023-10-20T20:20:00',
-                    display: 'block',
-                    borderColor: '#057E01',
-                    backgroundColor: '#057E01',
-                    url: 'reservation-detail.html'
-                },
-                {
-                    title: '可預約',
-                    start: '2023-10-12T17:30:00',
-                    display: 'block',
-                    borderColor: 'green',
-                    backgroundColor: 'green',
-                    url: 'reservation-detail.html'
-                },
-                {
-                    title: '未開放預約',
-                    start: '2023-10-20T20:30:00',
-                    display: 'block',
-                    borderColor: '#746D6D',
-                    backgroundColor: '#746D6D'
-                },
-                {
-                    title: '可預約',
-                    start: '2023-10-12T19:20:00',
-                    display: 'block',
-                    borderColor: '#057E01',
-                    backgroundColor: '#057E01',
-                    url: 'reservation-detail.html'
-                },
-                {
-                    title: '已額滿',
-                    start: '2023-10-12T18:00:00',
-                    display: 'block',
-                    borderColor: '#DB0909',
-                    backgroundColor: '#DB0909'
-                },
-                {
-                    title: '可預約',
-                    start: '2023-10-12T21:20:00',
-                    display: 'block',
-                    borderColor: '#057E01',
-                    backgroundColor: '#057E01',
-                    url: 'reservation-detail.html'
-                },
-                {
-                    title: '已額滿',
-                    start: '2023-10-13T09:00:00',
-                    display: 'block',
-                    borderColor: '#DB0909',
-                    backgroundColor: '#DB0909'
-                },
-                {
-                    title: '可預約',
-                    start: '2023-10-15T17:30:00',
-                    display: 'block',
-                    borderColor: 'green',
-                    backgroundColor: 'green',
-                    url: 'reservation-detail.html'
-                }
-            ],
-            eventColor: '#378006'
-        });
-
-        calendar.render();
-        $(".js-calendar").find("a").attr("title", "看更多");
-    });
-
 </script>
 	</body>
 

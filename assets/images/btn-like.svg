@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="51.656" viewBox="0 0 30 51.656">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_844" data-name="Rectangle 844" width="30" height="25.828" fill="#ff4d7d" stroke="#fff" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="Rectangle_844-2" data-name="Rectangle 844" width="30" height="25.828" fill="#fff" stroke="#ae864b" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="btn-like" transform="translate(-3645 62.216)">
+    <g id="Component_16_10" data-name="Component 16 – 10" transform="translate(3645 -36.388)">
+      <g id="Group_1058" data-name="Group 1058" clip-path="url(#clip-path)">
+        <path id="Path_9203" data-name="Path 9203" d="M14.343,20.242l8.85-8.85a6.672,6.672,0,0,0,0-9.436l0,0a6.672,6.672,0,0,0-9.436,0L12.574,3.135,11.393,1.954a6.672,6.672,0,0,0-9.436,0l0,0a6.672,6.672,0,0,0,0,9.436l8.85,8.85a2.5,2.5,0,0,0,3.539,0" transform="translate(2.426 2.426)" fill="#ff4d7d" stroke="#fff" stroke-width="1" fill-rule="evenodd"/>
+      </g>
+    </g>
+    <g id="Component_16_9" data-name="Component 16 – 9" transform="translate(3645 -62.216)">
+      <g id="Group_1058-2" data-name="Group 1058" clip-path="url(#clip-path-2)">
+        <path id="Path_9203-2" data-name="Path 9203" d="M14.343,20.242l8.85-8.85a6.672,6.672,0,0,0,0-9.436l0,0a6.672,6.672,0,0,0-9.436,0L12.574,3.135,11.393,1.954a6.672,6.672,0,0,0-9.436,0l0,0a6.672,6.672,0,0,0,0,9.436l8.85,8.85a2.5,2.5,0,0,0,3.539,0" transform="translate(2.426 2.426)" fill="#fff" stroke="#ae864b" stroke-width="1" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>

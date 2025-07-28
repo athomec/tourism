@@ -253,7 +253,12 @@
                     <div class="ps-xl-4">
                         <div class="d-flex flex-wrap flex-column-reverse flex-sm-row flex-lg-column-reverse flex-xl-row mb-3 mb-md-4">
                             <h2 class="section-title mb-0">新纖美日-蔬釋人生(野菜青汁)</h2>
-                            <a href="market.html" class="btn section-btn ms-auto mt-1 mb-2 my-lg-1" title="返回"><img src="./assets/images/ic-back.svg" alt="icon" class="me-1">返回</a>
+                            <div class="d-flex ms-auto mb-2">
+                                <button class="btn section-btn me-2 js-toggle-btn" title="收藏"
+                                    data-con="like">收藏</button>
+                                <a href="market.html" class="btn section-btn" title="返回"><img src="./assets/images/ic-back.svg"
+                                        alt="icon" class="me-1">返回</a>
+                            </div>
                         </div>
                         <div class="bg-secondary-light rounded-3 p-3 p-lg-4 mb-4">
                             <div class="row gy-2">
@@ -294,10 +299,22 @@
                             桃園市農會：產品購買
                         </p>
                         <div class="d-flex align-items-center">
-                            <p class="ms-auto me-3 fw-bold fs-2 text-primary-xdark"><span class="fs-6">NT$</span>1,250</p>
-                            <button class="btn btn-primary d-flex align-items-center rounded-3 text-white py-1 px-4">
-                                <img src="./assets/images/ic-cart.svg" alt="icon" class="me-2">立即購買
+                            <span class="me-3">分享連結</span> 
+                            <button class="section-btn btn" title="複製連結" data-con="copy">
+                                <img src="./assets/images/ic-link.svg" alt="icon">複製連結
                             </button>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <p class="ms-auto fw-bold fs-2 text-primary-xdark mb-2"><span class="fs-6">NT$</span>1,250</p>
+                            <div class="d-flex align-items-center ms-auto">
+                                <button class="btn btn-tertiary d-flex align-items-center rounded-pill text-white py-2 px-4 me-3">
+                                    <img src="./assets/images/ic-shop-white.svg" alt="icon" class="me-2">品牌直購
+                                </button>
+                                <button class="btn btn-primary-dark d-flex align-items-center rounded-pill text-white py-2 px-4">
+                                    <img src="./assets/images/ic-cart-white.svg" alt="icon" class="me-2">立即購買
+                                </button>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -640,67 +657,6 @@
         });
 
 
-
-
-
-
-
-
-        //首頁輪播
-        $('.js-theme-card').slick({
-            speed: 300,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            rows: 1,
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        rows: 1,
-                        dots: true,
-                        arrows: false,
-                    }
-                }
-            ]
-        });
-        //申辦服務輪播
-        $('.js-choose-service').slick({
-            speed: 300,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            rows: 2,
-            dots: true,
-            responsive: [
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 2,
-                        dots: true
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        rows: 3,
-                        dots: true
-                    }
-                }
-            ]
-        });
-        //預約輪播
         RESIZE();
 
         function RESIZE() {
@@ -731,9 +687,6 @@
         $(window).resize(function () {
             RESIZE();
         })
-
-        //下拉輸入選單
-        $('.js-input-select').select2();
 
         //時間表單
         var datetimepickerOptions = {
@@ -777,120 +730,7 @@
         var today1 = moment(); // 第一個今天的日期
         var today2 = moment(); // 第二個今天的日期
 
-
-        //自動開啟完成視窗
-        const myModalEl = document.getElementById('done');
-        setTimeout(function () {
-            const bsModal = new bootstrap.Modal(myModalEl);
-            bsModal.show();
-        }, 2000);
     });
-</script>
-<script>
-    //行事曆設定
-    document.addEventListener('DOMContentLoaded', function () {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            locale: 'zh-tw',//中文設定
-            buttonText: {
-                today: '今天',
-                month: '月',
-                week: '周',
-                day: '日',
-            },
-            headerToolbar: {
-                left: 'prev,next today',
-                center: 'title',
-                right: 'dayGridMonth,dayGridWeek,dayGridDay'
-            },
-            initialDate: '2023-10-12',
-            navLinks: true, // can click day/week names to navigate views
-            editable: true,
-            dayMaxEvents: true, // allow "more" link when too many events
-            events: [
-                {
-                    title: '未開放預約',
-                    start: '2023-10-09T13:30:00',
-                    display: 'block',
-                    borderColor: '#746D6D',
-                    backgroundColor: '#746D6D'
-                },
-                {
-                    title: '已結束預約',
-                    start: '2023-10-03T20:30:00',
-                    display: 'block',
-                    borderColor: '#746D6D',
-                    backgroundColor: '#746D6D'
-                },
-                {
-                    title: '可預約',
-                    start: '2023-10-20T20:20:00',
-                    display: 'block',
-                    borderColor: '#057E01',
-                    backgroundColor: '#057E01',
-                    url: 'reservation-detail.html'
-                },
-                {
-                    title: '可預約',
-                    start: '2023-10-12T17:30:00',
-                    display: 'block',
-                    borderColor: 'green',
-                    backgroundColor: 'green',
-                    url: 'reservation-detail.html'
-                },
-                {
-                    title: '未開放預約',
-                    start: '2023-10-20T20:30:00',
-                    display: 'block',
-                    borderColor: '#746D6D',
-                    backgroundColor: '#746D6D'
-                },
-                {
-                    title: '可預約',
-                    start: '2023-10-12T19:20:00',
-                    display: 'block',
-                    borderColor: '#057E01',
-                    backgroundColor: '#057E01',
-                    url: 'reservation-detail.html'
-                },
-                {
-                    title: '已額滿',
-                    start: '2023-10-12T18:00:00',
-                    display: 'block',
-                    borderColor: '#DB0909',
-                    backgroundColor: '#DB0909'
-                },
-                {
-                    title: '可預約',
-                    start: '2023-10-12T21:20:00',
-                    display: 'block',
-                    borderColor: '#057E01',
-                    backgroundColor: '#057E01',
-                    url: 'reservation-detail.html'
-                },
-                {
-                    title: '已額滿',
-                    start: '2023-10-13T09:00:00',
-                    display: 'block',
-                    borderColor: '#DB0909',
-                    backgroundColor: '#DB0909'
-                },
-                {
-                    title: '可預約',
-                    start: '2023-10-15T17:30:00',
-                    display: 'block',
-                    borderColor: 'green',
-                    backgroundColor: 'green',
-                    url: 'reservation-detail.html'
-                }
-            ],
-            eventColor: '#378006'
-        });
-
-        calendar.render();
-        $(".js-calendar").find("a").attr("title", "看更多");
-    });
-
 </script>
 	</body>
 
