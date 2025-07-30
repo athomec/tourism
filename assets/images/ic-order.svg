@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_850" data-name="Rectangle 850" width="15" height="17.308" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <g id="ic-order" transform="translate(-4251 -4940)">
+    <g id="ic-order-2" data-name="ic-order" transform="translate(4255 4943)">
+      <g id="Group_1085" data-name="Group 1085" clip-path="url(#clip-path)">
+        <path id="Path_9212" data-name="Path 9212" d="M80.123,57.972h3.462a.577.577,0,1,0,0-1.154H80.123a.577.577,0,0,0,0,1.154" transform="translate(-71.469 -51.049)" fill="#fff" fill-rule="evenodd"/>
+        <path id="Path_9213" data-name="Path 9213" d="M80.123,103.427h3.462a.577.577,0,1,0,0-1.154H80.123a.577.577,0,0,0,0,1.154" transform="translate(-71.469 -91.888)" fill="#fff" fill-rule="evenodd"/>
+        <path id="Path_9214" data-name="Path 9214" d="M80.123,80.7h3.462a.577.577,0,1,0,0-1.154H80.123a.577.577,0,0,0,0,1.154" transform="translate(-71.469 -71.468)" fill="#fff" fill-rule="evenodd"/>
+        <path id="Path_9215" data-name="Path 9215" d="M80.123,126.154h3.462a.577.577,0,1,0,0-1.154H80.123a.577.577,0,0,0,0,1.154" transform="translate(-71.469 -112.308)" fill="#fff" fill-rule="evenodd"/>
+        <path id="Path_9216" data-name="Path 9216" d="M22.9,58.958l1.154,1.154a.577.577,0,0,0,.816,0L27.175,57.8a.577.577,0,0,0-.816-.816l-1.9,1.9-.746-.746a.577.577,0,0,0-.816.816" transform="translate(-20.421 -51.05)" fill="#fff" fill-rule="evenodd"/>
+        <path id="Path_9217" data-name="Path 9217" d="M22.9,104.412l1.154,1.154a.577.577,0,0,0,.816,0l2.308-2.308a.577.577,0,0,0-.816-.816l-1.9,1.9-.746-.746a.577.577,0,0,0-.816.816" transform="translate(-20.421 -91.889)" fill="#fff" fill-rule="evenodd"/>
+        <path id="Path_9218" data-name="Path 9218" d="M12.115,0H2.885A2.885,2.885,0,0,0,0,2.885V14.423a2.885,2.885,0,0,0,2.885,2.885h9.231A2.885,2.885,0,0,0,15,14.423V2.885A2.885,2.885,0,0,0,12.115,0M3.462,1.154H2.885A1.731,1.731,0,0,0,1.154,2.885V14.423a1.731,1.731,0,0,0,1.731,1.731h9.231a1.731,1.731,0,0,0,1.731-1.731V2.885a1.731,1.731,0,0,0-1.731-1.731h-.577v.577A1.731,1.731,0,0,1,9.808,3.462H5.192A1.731,1.731,0,0,1,3.462,1.731Zm6.923,0v.577a.577.577,0,0,1-.577.577H5.192a.577.577,0,0,1-.577-.577V1.154Z" fill="#fff" fill-rule="evenodd"/>
+      </g>
+    </g>
+    <rect id="Rectangle_880" data-name="Rectangle 880" width="24" height="24" transform="translate(4251 4940)" fill="none"/>
+  </g>
+</svg>

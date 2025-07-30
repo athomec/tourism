@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="34" viewBox="0 0 34 34">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_867" data-name="Rectangle 867" width="30" height="30" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="ic-cart-title-status" transform="translate(-255 -1765)">
+    <g id="Group_1094" data-name="Group 1094" transform="translate(257 1767)">
+      <g id="Group_1093" data-name="Group 1093" clip-path="url(#clip-path)">
+        <path id="Path_9223" data-name="Path 9223" d="M31.728,22.727a9,9,0,1,0,9,9,9,9,0,0,0-9-9m0,2a7,7,0,1,1-7,7,7,7,0,0,1,7-7" transform="translate(-18.728 -18.727)" fill-rule="evenodd"/>
+        <path id="Path_9224" data-name="Path 9224" d="M20.351,24.594l4.528,4.528a3,3,0,0,0,4.243-4.243S26.238,22,24.614,20.342l-.006-.006a.979.979,0,0,1-.162-1.171l.008-.015A13,13,0,1,0,13,26a12.683,12.683,0,0,0,6.148-1.568l.006,0a1,1,0,0,1,1.2.165m5.942,3.114-4.529-4.529a3,3,0,0,0-3.589-.494A10.684,10.684,0,0,1,13,24a11,11,0,1,1,9.7-5.809,2.982,2.982,0,0,0,.494,3.559c1.622,1.651,4.514,4.543,4.514,4.543a1,1,0,0,1-1.414,1.414" fill-rule="evenodd"/>
+      </g>
+    </g>
+    <rect id="Rectangle_881" data-name="Rectangle 881" width="34" height="34" transform="translate(255 1765)" fill="none"/>
+  </g>
+</svg>
