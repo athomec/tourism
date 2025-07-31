@@ -25344,6 +25344,8 @@ a.file-list-item {
     @media (min-width: 768px) {
       .cart-header {
         font-size: 1.1rem; } }
+    .cart-header .form-check-input {
+      margin-top: 3px !important; }
   .cart-item {
     display: -webkit-box;
     display: -ms-flexbox;
