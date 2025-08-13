@@ -19061,7 +19061,8 @@ input[readonly] {
       text-align: left;
       border-bottom: 1px solid #FFA6CA;
       position: relative;
-      color: #9C2546; }
+      color: #9C2546;
+      white-space: nowrap; }
       @media (min-width: 576px) {
         .navbar-nav-link {
           padding: 16px 16px 16px 92px; } }
