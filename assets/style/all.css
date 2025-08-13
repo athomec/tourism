@@ -21138,7 +21138,7 @@ input[readonly] {
 .hot {
   position: relative;
   z-index: 15;
-  padding: 40px 0;
+  padding: 40px 0 96px 0;
   background: #fff; }
   .hot::before, .hot::after {
     content: "";
@@ -21301,6 +21301,17 @@ input[readonly] {
       @media (min-width: 1200px) {
         .hot-title span {
           font-size: 1rem; } }
+    .hot-title p {
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+         text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      height: 47px; }
+      @media (min-width: 1200px) {
+        .hot-title p {
+          height: 68px; } }
   .hot-info {
     color: #FF4D7D;
     font-weight: 700;
@@ -21315,24 +21326,28 @@ input[readonly] {
     border-radius: 50%;
     top: auto;
     bottom: -40px; }
+    @media (min-width: 768px) {
+      .hot .slick-prev,
+      .hot .slick-next {
+        bottom: -80px; } }
     @media (min-width: 1400px) {
       .hot .slick-prev,
       .hot .slick-next {
         width: 48px;
         height: 48px;
-        bottom: -46px; } }
+        bottom: -96px; } }
   .hot .slick-next {
     background: url("../images/ic-arrow-light-next.svg") no-repeat #FF4D7D center;
     right: calc(50% - 50px) !important; }
     @media (min-width: 768px) {
       .hot .slick-next {
-        right: calc(50% - 150px) !important; } }
+        right: calc(50% - 60px) !important; } }
   .hot .slick-prev {
     background: url("../images/ic-arrow-light-prev.svg") no-repeat #FF4D7D center;
     left: calc(50% - 50px) !important; }
     @media (min-width: 768px) {
       .hot .slick-prev {
-        left: calc(50% - 150px) !important; } }
+        left: calc(50% - 60px) !important; } }
   .hot .slick-dots {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -21342,11 +21357,14 @@ input[readonly] {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0 auto; }
+    margin: -15px auto 0 auto; }
+    @media (min-width: 1200px) {
+      .hot .slick-dots {
+        margin: -30px auto 0 auto; } }
     .hot .slick-dots li {
       width: 20px;
       height: 8px;
-      margin-right: 4px; }
+      margin: 0 8px 0 0; }
       .hot .slick-dots li:last-child {
         margin-right: 0;
         margin-bottom: 0; }
@@ -23386,7 +23404,8 @@ input[readonly] {
       padding-right: 8%; } }
 
 .market-item {
-  position: relative; }
+  position: relative;
+  height: 100%; }
 
 .market-shop {
   display: -webkit-box;
@@ -23442,7 +23461,8 @@ input[readonly] {
   padding: 16px;
   position: relative;
   text-align: center;
-  border: 1px solid #fff; }
+  border: 1px solid #fff;
+  height: 100%; }
   .market-card:hover {
     border: 1px solid #FFA6CA; }
   .market-card-tag {
@@ -23474,12 +23494,18 @@ input[readonly] {
   .market-card-title {
     color: #000;
     font-size: 1.2rem;
-    margin-bottom: 4px; }
+    margin-bottom: 4px;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; }
   .market-card-info {
     display: block;
     font-size: 1rem;
     color: #495057;
-    margin-bottom: 12px; }
+    margin-bottom: 32px; }
   .market-card-more {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -23491,9 +23517,12 @@ input[readonly] {
         -ms-flex-align: center;
             align-items: center;
     color: #FF4D7D;
-    font-size: 0.9rem; }
+    font-size: 0.9rem;
+    position: absolute;
+    right: 16px;
+    bottom: 16px; }
     .market-card-more img {
-      margin-top: 2px;
+      margin-top: 1px;
       margin-left: 2px; }
 
 .section-tag {
