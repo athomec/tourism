@@ -378,6 +378,7 @@
 <script src='assets/js/jquery-ui.min.js'></script>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/slick.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
 <script src="assets/js/moment-with-locales.min.js"></script>
 <script src="assets/js/tempusdominus-bootstrap-4.js"></script>
 <script src="assets/js/select2.min.js"></script>
@@ -430,13 +431,14 @@
                 }
             ]
         });
-        $('.js-hot').slick({
-            slidesToShow: 4,
-            slidesToScroll: 4,
+        
+        /*$('.js-hot').slick({
             dots: true,
             centerMode: false,
             focusOnSelect: false,
             arrows: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
             rows: 2,
             responsive: [
                 {
@@ -466,7 +468,45 @@
                     }
                 }
             ]
+        });*/
+        const swiper = new Swiper('.js-hot', {
+            grid: {
+                rows: 2,
+                fill: 'row', // 橫向排列
+            },
+            spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                1400: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 4,
+                    grid: { rows: 2 }
+                },
+                768: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    grid: { rows: 2 }
+                },
+                576: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    grid: { rows: 2 }
+                },
+                350: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    grid: { rows: 2 }
+                }
+            },
         });
+
         $('.js-ranking').slick({
             slidesToShow: 2,
             slidesToScroll: 2,
@@ -475,6 +515,7 @@
             focusOnSelect: false,
             arrows: true,
             rows: 1,
+            infinite: false,
             responsive: [
                 {
                     breakpoint: 700,
