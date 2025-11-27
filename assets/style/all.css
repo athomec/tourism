@@ -22945,6 +22945,28 @@ input[readonly] {
     width: 100%;
     text-align: center; }
 
+.form-control {
+  font-size: 0.9rem; }
+  @media (min-width: 768px) {
+    .form-control {
+      font-size: 1rem !important; } }
+  .form-control[disabled] {
+    background: #FFF6F9;
+    border: 1px solid #ced4da !important; }
+
+.form-label {
+  font-size: 0.9rem; }
+  @media (min-width: 768px) {
+    .form-label {
+      font-size: 1rem; } }
+
+.form-select {
+  font-size: 0.9rem;
+  background: url("../images/ic-dropdown.svg") no-repeat right center #fff !important; }
+  @media (min-width: 768px) {
+    .form-select {
+      font-size: 1rem; } }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -24550,6 +24572,12 @@ button.swiper-pagination-bullet {
   @media (min-width: 1200px) {
     [data-size="lg"] .section-thumb {
       height: 217px; } }
+
+.content-title {
+  font-size: 1rem; }
+  @media (min-width: 768px) {
+    .content-title {
+      font-size: 1.1rem; } }
 
 .section-video {
   display: block;
