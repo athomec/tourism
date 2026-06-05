@@ -119,12 +119,12 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#" title="認識桃園好農" class="navbar-nav-link collapsed">認識桃園好農</a>
+                    <a href="#" title="活動專區" class="navbar-nav-link collapsed">活動專區</a>
                 </li>
                 <li>
-                    <a href="market.html" title="優質農產雲市集" class="navbar-nav-link collapsed" data-bs-toggle="collapse"
+                    <a href="market.html" title="農產市集" class="navbar-nav-link collapsed" data-bs-toggle="collapse"
                         data-bs-target="#dropdown1">
-                        優質農產雲市集
+                        農產市集
                         <img src="./assets/images/ic-arrow.svg" alt="icon" class="ms-2">
                     </a>
                     <div id="dropdown1" class="navbar-dropdown accordion-collapse collapse"
@@ -138,12 +138,12 @@
                     </div>
                 </li>
                 <li>
-                    <a href="smart-detail.html" title="智慧農業場域" class="navbar-nav-link collapsed">智慧農業場域</a>
+                    <a href="smart-detail.html" title="智慧農業場域" class="navbar-nav-link collapsed">農業亮點</a>
                 </li>
                 <li>
                     <a href="#" title="好農專區" class="navbar-nav-link collapsed" data-bs-toggle="collapse"
                         data-bs-target="#dropdown2">
-                        好農專區
+                        桃園好農遊
                         <img src="./assets/images/ic-arrow.svg" alt="icon" class="ms-2">
                     </a>
                     <div id="dropdown2" class="navbar-dropdown accordion-collapse collapse"
@@ -157,10 +157,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#" title="好農地圖" class="navbar-nav-link collapsed">好農地圖</a>
-                </li>
-                <li>
-                    <a href="#" title="宣傳品下載" class="navbar-nav-link collapsed">宣傳品下載</a>
+                    <a href="#" title="宣傳品下載" class="navbar-nav-link collapsed">下載專區</a>
                 </li>
                 <li class="position-static">
                     <div class="shop-btn js-shop">
@@ -170,10 +167,23 @@
                         <a href="#" class="shop-btn-item btn" title="收藏商品">
                             <img src="./assets/images/ic-like.svg" alt="icon"><span>收藏商品</span>
                         </a>
+                        <a href="#" class="shop-btn-item btn" title="訂單追蹤">
+                            <img src="./assets/images/ic-order-track.svg" alt="icon"><span>訂單追蹤</span>
+                        </a>
+                        <a href="#" class="shop-btn-item btn" title="優惠券管理">
+                            <img src="./assets/images/ic-ticket.svg" alt="icon"><span>優惠券管理</span>
+                        </a>
                     </div>
                 </li>
             </ul>
         </div>
+        <div class="countdown">
+            新年特惠活動‧距離結束 
+            <div class="ms-4"><span>22</span>時</div>
+            <div class="ms-2"><span>15</span>分</div>
+            <div class="ms-2"><span>56</span>秒</div>
+</div>
+
     </nav>
 
 </header>
@@ -432,43 +442,6 @@
             ]
         });
         
-        /*$('.js-hot').slick({
-            dots: true,
-            centerMode: false,
-            focusOnSelect: false,
-            arrows: true,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            rows: 2,
-            responsive: [
-                {
-                    breakpoint: 1400,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3,
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        rows: 1,
-                        arrows: true,
-                        dots: false,
-                    }
-                },
-                {
-                    breakpoint: 576,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        rows: 2,
-                        dots: false,
-                    }
-                }
-            ]
-        });*/
         const swiper = new Swiper('.js-hot', {
             grid: {
                 rows: 2,
@@ -518,7 +491,7 @@
             infinite: false,
             responsive: [
                 {
-                    breakpoint: 700,
+                    breakpoint: 576,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,

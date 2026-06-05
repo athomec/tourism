@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_993" data-name="Rectangle 993" width="24" height="23.885" fill="#666"/>
+    </clipPath>
+  </defs>
+  <g id="ic-pay" transform="translate(-6865 287)">
+    <g id="Group_1744" data-name="Group 1744" transform="translate(6867 -285)">
+      <g id="Group_1191" data-name="Group 1191" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="Path_9333" data-name="Path 9333" d="M12.279,1.554a.748.748,0,0,0-.558,0L2.769,5.135,6.375,6.576l9.231-3.691Zm5.346,2.139L8.394,7.385,12,8.826l9.231-3.692ZM22.5,6.243l-9.75,3.9V22.026l9.75-3.9V6.243ZM11.25,22.028V10.142L1.5,6.243V18.128ZM11.164.161a2.25,2.25,0,0,1,1.671,0L23.529,4.439a.75.75,0,0,1,.471.7V18.128a1.5,1.5,0,0,1-.944,1.392L12.279,23.831a.748.748,0,0,1-.558,0L.945,19.52A1.5,1.5,0,0,1,0,18.128V5.135a.75.75,0,0,1,.471-.7Z" transform="translate(0 0)" fill="#666"/>
+      </g>
+    </g>
+    <rect id="Rectangle_1225" data-name="Rectangle 1225" width="28" height="28" transform="translate(6865 -287)" fill="none"/>
+  </g>
+</svg>
