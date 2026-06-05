@@ -33427,7 +33427,7 @@ a.file-list-item:hover {
           flex-direction: column;
   background: #FFF6F9;
   border-radius: 6px;
-  padding: 6px 0;
+  padding: 6px 12px;
   border: 1px solid #ced4da;
   width: 100%;
 }
@@ -33437,6 +33437,7 @@ a.file-list-item:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding: 6px 0;
   }
 }
 .shipping-number span {
