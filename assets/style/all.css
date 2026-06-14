@@ -30493,23 +30493,29 @@ button.swiper-pagination-bullet {
 .side-menu {
   position: fixed;
   width: 250px;
-  height: calc(100vh - 88px);
+  height: calc(100vh - 142px);
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   left: 0;
-  top: 88px;
+  top: 142px;
   padding: 24px;
   z-index: 150;
   background: #F5E8D8;
 }
 @media (min-width: 576px) {
   .side-menu {
-    top: 50px;
-    height: calc(100vh - 50px);
+    top: 89px;
+    height: calc(100vh - 89px);
     padding: 72px 24px 32px 24px;
+  }
+}
+@media (min-width: 768px) {
+  .side-menu {
+    height: calc(100vh - 92px);
+    top: 92px;
   }
 }
 @media (min-width: 992px) {
@@ -34130,8 +34136,8 @@ a.file-list-item:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #659E52;
-  color: #fff;
+  background: #659E52 !important;
+  color: #fff !important;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
