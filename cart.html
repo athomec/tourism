@@ -570,7 +570,7 @@
                             <div class="col-xl-3">
                                 <label for="send" class="form-label flex-shrink-0 me-3 mb-1">寄送方式</label>
                                 <select class="form-select border-primary-xdark" id="send" title="選擇寄送方式">
-                                    <option selected>7-11店到店</option>
+                                    <option selected>黑貓宅急便</option>
                                     <option value="1">全家店到店</option>
                                 </select>
                             </div>
@@ -590,6 +590,28 @@
                             </div>
                         </div>
 
+                        <h3 class="text-primary-xdark content-title">寄送方式</h3>
+                        <div class="row gx-3 gx-lg-2 gx-xl-3 gy-3 mb-4">
+                            <div class="col-xl-3">
+                                <label for="send" class="form-label flex-shrink-0 me-3 mb-1">寄送方式</label>
+                                <select class="form-select border-primary-xdark" id="send" title="選擇寄送方式">
+                                    <option selected>7-11店到店</option>
+                                    <option value="1">全家店到店</option>
+                                </select>
+                            </div>
+                            <div class="col-xl-3">
+                                <label for="shop" class="form-label flex-shrink-0 me-3 mb-1">寄送門市</label>
+                                <input class="form-control border-primary-xdark" id="shop" type="text"
+                                    placeholder="請輸入寄送門市">
+                            </div>
+                            <div class="col-xl-6 d-flex align-items-end">
+                                <button
+                                    class="btn btn-primary-dark d-flex align-items-center text-white rounded-pill px-3 py-2"
+                                    title="搜尋門市">
+                                    <img src="./assets/images/ic-search-light.svg" alt="icon">搜尋門市</button>
+                            </div>
+                        </div>
+
                         <h3 class="text-primary-xdark content-title">發票資訊</h3>
                         <div class="row gx-3 gy-3 mb-4">
                             <div class="col-sm-6">
@@ -605,7 +627,7 @@
                                         class="text-danger fw-bold">*</span></label>
                                 <div class="w-100">
                                     <input class="form-control border-primary-xdark" id="carrier" type="text"
-                                        value="/+12345" title="手機載具條碼" >
+                                        value="/+12345" title="手機載具條碼">
                                 </div>
                             </div>
                         </div>
@@ -631,14 +653,13 @@
                         </div>
 
                         <div class="d-sm-flex align-items-center mb-4">
-                            <div class="form-check d-flex align-items-start me-4">
+                            <div class="form-check d-flex align-items-start me-3">
                                 <input class="form-check-input" type="checkbox" value="" id="policy" checked>
                                 <label class="form-check-label fw-normal mb-2 mb-sm-0" for="policy">
                                     我已詳閱並同意桃園好農平台退換貨政策
                                 </label>
                             </div>
-                            <a href="#"
-                                class="btn section-btn ps-3 py-2 lh-1 flex-shrink-0 justify-content-center fs-7"
+                            <a href="#" class="btn section-btn ps-3 py-1 lh-1 flex-shrink-0 justify-content-center fs-7"
                                 title="檢視政策" data-con="order">
                                 檢視政策<img src="./assets/images/ic-open.svg" alt="icon" class="ms-1">
                             </a>
@@ -647,7 +668,8 @@
                     <div class="col-lg-6 col-xl-4">
                         <h3 class="text-primary-xdark content-title">優惠券與優惠碼</h3>
                         <div class=" bg-secondary-xxlight px-4 py-1 rounded-3 mb-4">
-                            <div class="d-flex flex-column flex-sm-row align-items-sm-center border-1 border-bottom py-3">
+                            <div
+                                class="d-flex flex-column flex-sm-row align-items-sm-center border-1 border-bottom py-3">
                                 <label for="coupon" class="form-label flex-shrink-0 me-3 mb-sm-0">線上優惠券</label>
                                 <select class="form-select border-primary-xdark" id="coupon" title="線上優惠券"
                                     style="min-width: 0;">
@@ -655,7 +677,8 @@
                                     <option value="1">優惠券1</option>
                                 </select>
                             </div>
-                            <div class="d-flex flex-column flex-sm-row align-items-sm-center border-1 border-bottom py-3">
+                            <div
+                                class="d-flex flex-column flex-sm-row align-items-sm-center border-1 border-bottom py-3">
                                 <label for="fee-coupon" class="form-label flex-shrink-0 me-3 mb-sm-0">運費優惠券</label>
                                 <select class="form-select border-primary-xdark" id="fee-coupon" title="運費優惠券"
                                     style="min-width: 0;">
@@ -663,20 +686,22 @@
                                     <option value="1">優惠券1</option>
                                 </select>
                             </div>
-                            <div class="d-flex flex-column flex-sm-row align-items-sm-center border-1 border-bottom py-3">
+                            <div
+                                class="d-flex flex-column flex-sm-row align-items-sm-center border-1 border-bottom py-3">
                                 <label for="code-coupon" class="form-label flex-shrink-0 me-3 mb-sm-0">優惠碼　　</label>
                                 <input class="form-control border-primary-xdark" id="code-coupon" type="text"
                                     placeholder="輸入優惠碼">
                             </div>
-                            <div class="d-flex flex-column flex-sm-row align-items-sm-center border-1 border-bottom py-3">
+                            <div
+                                class="d-flex flex-column flex-sm-row align-items-sm-center border-1 border-bottom py-3">
                                 <div class="d-flex flex-sm-column">
                                     <label for="coin" class="form-label flex-shrink-0 me-3 mb-1">會員點數折抵</label>
                                     <p class="text-tertiary fs-7">剩餘 1,000 點</p>
                                 </div>
                                 <div class="d-flex">
-                                    <input class="form-control border-primary-xdark me-2 ms-sm-auto" id="coin" type="text"
-                                    value="1,000" style="width: 80px;">
-                                <span class="pt-2">點</span>
+                                    <input class="form-control border-primary-xdark me-2 ms-sm-auto" id="coin"
+                                        type="text" value="1,000" style="width: 80px;">
+                                    <span class="pt-2">點</span>
                                 </div>
                             </div>
                         </div>
@@ -769,7 +794,7 @@
                         <div class="cart-item-con">
                             <p>新纖美日-蔬釋人生(野菜青汁)</p>
                             <p>黑豆 100g <span class="text-primary-xdark px-2">+</span> 黑豆 100g <span
-                                class="text-primary-xdark px-2">+</span> 黑豆 100g</p>
+                                    class="text-primary-xdark px-2">+</span> 黑豆 100g</p>
                         </div>
                     </div>
                     <div class="cart-item-order">
@@ -841,8 +866,8 @@
                             <div class="col-sm-3">
                                 <label for="receive-way" class="form-label mb-1">寄送方式</label>
                                 <div class="w-100">
-                                    <input class="form-control border-primary-xdark" id="receiver-way" type="text" title="黑貓-常溫配送"
-                                        disabled value="黑貓-常溫配送">
+                                    <input class="form-control border-primary-xdark" id="receiver-way" type="text"
+                                        title="黑貓-常溫配送" disabled value="黑貓-常溫配送">
                                 </div>
                             </div>
                             <div class="col-sm-2">
@@ -877,14 +902,14 @@
                             <div class="col-sm-7">
                                 <label for="receive-way-check" class="form-label mb-1">發票類型</label>
                                 <div class="w-100">
-                                    <input class="form-control border-primary-xdark" id="receiver-way-check" type="text" title="發票類型" 
-                                        disabled value="個人雲端發票（二聯式）">
+                                    <input class="form-control border-primary-xdark" id="receiver-way-check" type="text"
+                                        title="發票類型" disabled value="個人雲端發票（二聯式）">
                                 </div>
                             </div>
                             <div class="col-sm-5">
                                 <label for="receive-carrier-check" class="form-label flex-shrink-0 mb-1">手機載具條碼</label>
-                                <input class="form-control border-primary-xdark me-3 w-100" id="receive-carrier-check" title="手機載具條碼"
-                                    type="text" disabled value="/HXMSUI8">
+                                <input class="form-control border-primary-xdark me-3 w-100" id="receive-carrier-check"
+                                    title="手機載具條碼" type="text" disabled value="/HXMSUI8">
                             </div>
                         </div>
                     </div>
@@ -964,11 +989,11 @@
                 </div>
                 <div class="d-flex">
                     <a href="#" class="btn btn-gray-700 text-white rounded-pill lh-1 px-3 px-sm-4 py-2 me-2"
-                    title="取消訂單">取消訂單</a>
-                <a href="#" class="btn btn-primary-dark text-white rounded-pill lh-1 px-3 px-sm-4 py-2 me-2"
-                    title="訂單退貨">訂單退貨</a>
-                <a href="#" class="btn btn-tertiary text-white rounded-pill lh-1 px-3 px-sm-4 py-2"
-                    title="訂單檢視">訂單檢視</a>
+                        title="取消訂單">取消訂單</a>
+                    <a href="#" class="btn btn-primary-dark text-white rounded-pill lh-1 px-3 px-sm-4 py-2 me-2"
+                        title="訂單退貨">訂單退貨</a>
+                    <a href="#" class="btn btn-tertiary text-white rounded-pill lh-1 px-3 px-sm-4 py-2"
+                        title="訂單檢視">訂單檢視</a>
                 </div>
             </div>
         </section>

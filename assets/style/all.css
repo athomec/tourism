@@ -23699,39 +23699,44 @@ select:placeholders {
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #adb5bd !important;
+  color: #6c757d !important;
+  font-size: 0.9rem !important;
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
-  color: #adb5bd !important;
+  color: #6c757d !important;
+  font-size: 0.9rem !important;
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #adb5bd !important;
+  color: #6c757d !important;
+  font-size: 0.9rem !important;
 }
 
 input::-ms-input-placeholder, textarea::-ms-input-placeholder {
-  color: #adb5bd !important;
+  color: #6c757d !important;
+  font-size: 0.9rem !important;
 }
 
 input::placeholder, textarea::placeholder {
-  color: #adb5bd !important;
+  color: #6c757d !important;
+  font-size: 0.9rem !important;
 }
 @media (min-width: 576px) {
   input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
   }
   input::-moz-placeholder, textarea::-moz-placeholder {
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
   }
   input:-ms-input-placeholder, textarea:-ms-input-placeholder {
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
   }
   input::-ms-input-placeholder, textarea::-ms-input-placeholder {
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
   }
   input::placeholder, textarea::placeholder {
-    font-size: 0.9rem !important;
+    font-size: 1rem !important;
   }
 }
 
