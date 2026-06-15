@@ -217,105 +217,342 @@
                 <div class="d-flex flex-column align-items-center align-items-md-start flex-md-row  py-md-3">
                     <label for="coupon-num" class="form-label mt-2 mb-1 me-3 fw-bold flex-shrink-0">輸入優惠券代碼</label>
                     <div class="d-flex flex-column align-items-center align-items-md-start w-100 mt-1 mb-2 me-md-3">
-                        <input class="form-control border-primary-xdark mb-2 rounded-pill px-3" id="coupon-num" type="text" placeholder="請輸入 8 位代碼">
-                    <span class="text-primary-dark fs-7">請輸入您獲得的活動代碼以獲取專屬優惠</span>
+                        <input class="form-control border-primary-xdark mb-2 rounded-pill px-3" id="coupon-num"
+                            type="text" placeholder="請輸入 8 位代碼">
+                        <span class="text-primary-dark fs-7">請輸入您獲得的活動代碼以獲取專屬優惠</span>
                     </div>
-                    <button class="btn btn-primary-dark text-white rounded-pill px-4 py-2 flex-shrink-0" title="確認">確認</button>
+                    <button class="btn btn-primary-dark text-white rounded-pill px-4 py-2 flex-shrink-0"
+                        title="確認">確認</button>
                 </div>
             </div>
 
             <div class="cart">
                 <div class="nav nav-tabs cart-tabs border-0 scrollbar" id="nav-tab" role="tablist">
-                    <button class="nav-link active" type="button" role="tab" data-bs-toggle="tab" title="可領取">可領取 (4)</button>
-                    <button class="nav-link" type="button" role="tab" data-bs-toggle="tab" title="已領取">已領取 (3)</button>
-                    <button class="nav-link" type="button" role="tab" data-bs-toggle="tab" title="已使用">已使用 (3)</button>
-                    <button class="nav-link" type="button" role="tab" data-bs-toggle="tab" title="已過期">已過期 (3)</button>
+                    <button class="nav-link active" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#able"
+                        title="可領取">可領取 (4)</button>
+                    <button class="nav-link" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#done"
+                        title="已領取">已領取 (3)</button>
+                    <button class="nav-link" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#used"
+                        title="已使用">已使用 (3)</button>
+                    <button class="nav-link" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#pass"
+                        title="已過期">已過期 (3)</button>
                 </div>
-                    <div class="container mw-100">
-                        <div class="row gx-4 gy-4 py-4 py-md-5">
-                            <div class="col-xxl-6">
-                                <div class="coupon">
-                                    <div class="row gx-0">
-                                        <div class="col-sm-4">
-                                            <div class="coupon-header">
-                                                <p>50元</p>
-                                                <span><img src="./assets/images/ic-coin.svg" alt="icon" class="me-2">折扣券</span>
+                <div class="container mw-100">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="able" role="tabpanel" tabindex="0">
+                            <div class="row gx-4 gy-4 py-4 py-md-5">
+                                <div class="col-xxl-6">
+                                    <div class="coupon">
+                                        <div class="row gx-0">
+                                            <div class="col-sm-4">
+                                                <div class="coupon-header">
+                                                    <p>50元</p>
+                                                    <span><img src="./assets/images/ic-coin.svg" alt="icon"
+                                                            class="me-2">折扣券</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="coupon-con">
+                                                    <div class="coupon-con-txt">
+                                                        <h3 class="coupon-con-title">桃園農會超市通用券</h3>
+                                                        <p>無門檻限制，全額可抵</p>
+                                                        <span><img src="./assets/images/ic-time.svg" alt="icon"
+                                                                class="me-2">剩餘 5天</span>
+                                                    </div>
+                                                    <button class="coupon-btn btn text-white">領取</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-8">
-                                            <div class="coupon-con">
-                                                <div class="coupon-con-txt">
-                                                    <h3 class="coupon-con-title">桃園農會超市通用券</h3>
-                                                    <p>無門檻限制，全額可抵</p>
-                                                    <span><img src="./assets/images/ic-time.svg" alt="icon" class="me-2">剩餘 5天</span>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6">
+                                    <div class="coupon">
+                                        <div class="row gx-0">
+                                            <div class="col-sm-4">
+                                                <div class="coupon-header">
+                                                    <p>50元</p>
+                                                    <span><img src="./assets/images/ic-coin.svg" alt="icon"
+                                                            class="me-2">折扣券</span>
                                                 </div>
-                                                <button class="coupon-btn btn text-white">領取</button>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="coupon-con">
+                                                    <div class="coupon-con-txt">
+                                                        <h3 class="coupon-con-title">桃園農會超市通用券</h3>
+                                                        <p>無門檻限制，全額可抵</p>
+                                                        <span><img src="./assets/images/ic-time.svg" alt="icon"
+                                                                class="me-2">剩餘 5天</span>
+                                                    </div>
+                                                    <button class="coupon-btn btn text-white">領取</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6">
+                                    <div class="coupon">
+                                        <div class="row gx-0">
+                                            <div class="col-sm-4">
+                                                <div class="coupon-header">
+                                                    <p>50元</p>
+                                                    <span><img src="./assets/images/ic-truck.svg" alt="icon" class="me-2">運費折抵券</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="coupon-con">
+                                                    <div class="coupon-con-txt">
+                                                        <h3 class="coupon-con-title">桃園農會超市通用券</h3>
+                                                        <p>無門檻限制，全額可抵</p>
+                                                        <span><img src="./assets/images/ic-time.svg" alt="icon"
+                                                                class="me-2">剩餘 5天</span>
+                                                    </div>
+                                                    <button class="coupon-btn btn text-white">領取</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6">
+                                    <div class="coupon">
+                                        <div class="row gx-0">
+                                            <div class="col-sm-4">
+                                                <div class="coupon-header">
+                                                    <p>50元</p>
+                                                    <span><img src="./assets/images/ic-coin.svg" alt="icon"
+                                                            class="me-2">折扣券</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="coupon-con">
+                                                    <div class="coupon-con-txt">
+                                                        <h3 class="coupon-con-title">桃園農會超市通用券</h3>
+                                                        <p>無門檻限制，全額可抵</p>
+                                                        <span><img src="./assets/images/ic-time.svg" alt="icon"
+                                                                class="me-2">剩餘 5天</span>
+                                                    </div>
+                                                    <div class="coupon-none">
+                                                        <p>額滿</p><span>已搶領一空</span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xxl-6">
-                                <div class="coupon">
-                                    <div class="row gx-0">
-                                        <div class="col-sm-4">
-                                            <div class="coupon-header">
-                                                <p>50元</p>
-                                                <span><img src="./assets/images/ic-coin.svg" alt="icon" class="me-2">折扣券</span>
+                        </div>
+                        <div class="tab-pane fade" id="done" role="tabpanel" tabindex="0">
+                            <div class="row gx-4 gy-4 py-4 py-md-5">
+                                <div class="col-xxl-6">
+                                    <div class="coupon">
+                                        <div class="row gx-0">
+                                            <div class="col-sm-4">
+                                                <div class="coupon-header">
+                                                    <p>50元</p>
+                                                    <span><img src="./assets/images/ic-coin.svg" alt="icon"
+                                                            class="me-2">折扣券</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="coupon-con">
+                                                    <div class="coupon-con-txt">
+                                                        <h3 class="coupon-con-title">桃園農會超市通用券</h3>
+                                                        <p>無門檻限制，全額可抵</p>
+                                                        <span><img src="./assets/images/ic-time.svg" alt="icon"
+                                                                class="me-2">剩餘 5天</span>
+                                                    </div>
+                                                    <button class="btn btn-primary-dark text-white rounded-pill mt-auto px-3 py-1">前往購物</button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-8">
-                                            <div class="coupon-con">
-                                                <div class="coupon-con-txt">
-                                                    <h3 class="coupon-con-title">桃園農會超市通用券</h3>
-                                                    <p>無門檻限制，全額可抵</p>
-                                                    <span><img src="./assets/images/ic-time.svg" alt="icon" class="me-2">剩餘 5天</span>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6">
+                                    <div class="coupon">
+                                        <div class="row gx-0">
+                                            <div class="col-sm-4">
+                                                <div class="coupon-header">
+                                                    <p>50元</p>
+                                                    <span><img src="./assets/images/ic-coin.svg" alt="icon"
+                                                            class="me-2">折扣券</span>
                                                 </div>
-                                                <button class="coupon-btn btn text-white">領取</button>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="coupon-con">
+                                                    <div class="coupon-con-txt">
+                                                        <h3 class="coupon-con-title">桃園農會超市通用券</h3>
+                                                        <p>無門檻限制，全額可抵</p>
+                                                        <span><img src="./assets/images/ic-time.svg" alt="icon"
+                                                                class="me-2">剩餘 10 時 32 分</span>
+                                                    </div>
+                                                    <button class="btn btn-primary-dark text-white rounded-pill mt-auto px-3 py-1">前往購物</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6">
+                                    <div class="coupon">
+                                        <div class="row gx-0">
+                                            <div class="col-sm-4">
+                                                <div class="coupon-header">
+                                                    <p>50元</p>
+                                                    <span><img src="./assets/images/ic-truck.svg" alt="icon"
+                                                            class="me-2">運費折抵券</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="coupon-con">
+                                                    <div class="coupon-con-txt">
+                                                        <h3 class="coupon-con-title">桃園農會超市通用券</h3>
+                                                        <p>無門檻限制，全額可抵</p>
+                                                        <span><img src="./assets/images/ic-time.svg" alt="icon"
+                                                                class="me-2">2026/12/12 22:00 止</span>
+                                                    </div>
+                                                    <button class="btn btn-primary-dark text-white rounded-pill mt-auto px-3 py-1">前往購物</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xxl-6">
-                                <div class="coupon">
-                                    <div class="row gx-0">
-                                        <div class="col-sm-4">
-                                            <div class="coupon-header">
-                                                <p>50元</p>
-                                                <span><img src="./assets/images/ic-coin.svg" alt="icon" class="me-2">折扣券</span>
+                        </div>
+                        <div class="tab-pane fade" id="used" role="tabpanel" tabindex="0">
+                            <div class="row gx-4 gy-4 py-4 py-md-5">
+                                <div class="col-xxl-6">
+                                    <div class="coupon" data-style="none">
+                                        <div class="row gx-0">
+                                            <div class="col-sm-4">
+                                                <div class="coupon-header">
+                                                    <p>50元</p>
+                                                    <span><img src="./assets/images/ic-coin.svg" alt="icon"
+                                                            class="me-2">折扣券</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="coupon-con">
+                                                    <div class="coupon-con-txt">
+                                                        <h3 class="coupon-con-title">桃園農會超市通用券</h3>
+                                                        <p>無門檻限制，全額可抵</p>
+                                                        <span>2026/12/12 使用</span>
+                                                    </div>
+                                                    <img src="./assets/images/ic-used.svg" alt="icon" class="coupon-con-pic">
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-8">
-                                            <div class="coupon-con">
-                                                <div class="coupon-con-txt">
-                                                    <h3 class="coupon-con-title">桃園農會超市通用券</h3>
-                                                    <p>無門檻限制，全額可抵</p>
-                                                    <span><img src="./assets/images/ic-time.svg" alt="icon" class="me-2">剩餘 5天</span>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6">
+                                    <div class="coupon" data-style="none">
+                                        <div class="row gx-0">
+                                            <div class="col-sm-4">
+                                                <div class="coupon-header">
+                                                    <p>50元</p>
+                                                    <span><img src="./assets/images/ic-coin.svg" alt="icon"
+                                                            class="me-2">折扣券</span>
                                                 </div>
-                                                <button class="coupon-btn btn text-white">領取</button>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="coupon-con">
+                                                    <div class="coupon-con-txt">
+                                                        <h3 class="coupon-con-title">桃園農會超市通用券</h3>
+                                                        <p>無門檻限制，全額可抵</p>
+                                                        <span>2026/12/12 使用</span>
+                                                    </div>
+                                                    <img src="./assets/images/ic-used.svg" alt="icon" class="coupon-con-pic">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6">
+                                    <div class="coupon" data-style="none">
+                                        <div class="row gx-0">
+                                            <div class="col-sm-4">
+                                                <div class="coupon-header">
+                                                    <p>50元</p>
+                                                    <span><img src="./assets/images/ic-truck.svg" alt="icon"
+                                                            class="me-2">運費折抵券</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="coupon-con">
+                                                    <div class="coupon-con-txt">
+                                                        <h3 class="coupon-con-title">桃園農會超市通用券</h3>
+                                                        <p>無門檻限制，全額可抵</p>
+                                                        <span>2026/12/12 使用</span>
+                                                    </div>
+                                                    <img src="./assets/images/ic-used.svg" alt="icon" class="coupon-con-pic">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xxl-6">
-                                <div class="coupon">
-                                    <div class="row gx-0">
-                                        <div class="col-sm-4">
-                                            <div class="coupon-header">
-                                                <p>50元</p>
-                                                <span><img src="./assets/images/ic-coin.svg" alt="icon" class="me-2">折扣券</span>
+                        </div>
+                        <div class="tab-pane fade" id="pass" role="tabpanel" tabindex="0">
+                            <div class="row gx-4 gy-4 py-4 py-md-5">
+                                <div class="col-xxl-6">
+                                    <div class="coupon" data-style="none">
+                                        <div class="row gx-0">
+                                            <div class="col-sm-4">
+                                                <div class="coupon-header">
+                                                    <p>50元</p>
+                                                    <span><img src="./assets/images/ic-coin.svg" alt="icon"
+                                                            class="me-2">折扣券</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="coupon-con">
+                                                    <div class="coupon-con-txt">
+                                                        <h3 class="coupon-con-title">桃園農會超市通用券</h3>
+                                                        <p>無門檻限制，全額可抵</p>
+                                                        <span>2026/12/12 過期</span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-8">
-                                            <div class="coupon-con">
-                                                <div class="coupon-con-txt">
-                                                    <h3 class="coupon-con-title">桃園農會超市通用券</h3>
-                                                    <p>無門檻限制，全額可抵</p>
-                                                    <span><img src="./assets/images/ic-time.svg" alt="icon" class="me-2">剩餘 5天</span>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6">
+                                    <div class="coupon" data-style="none">
+                                        <div class="row gx-0">
+                                            <div class="col-sm-4">
+                                                <div class="coupon-header">
+                                                    <p>50元</p>
+                                                    <span><img src="./assets/images/ic-coin.svg" alt="icon"
+                                                            class="me-2">折扣券</span>
                                                 </div>
-                                                <div class="coupon-none"><p>額滿</p><span>已搶領一空</span> </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="coupon-con">
+                                                    <div class="coupon-con-txt">
+                                                        <h3 class="coupon-con-title">桃園農會超市通用券</h3>
+                                                        <p>無門檻限制，全額可抵</p>
+                                                        <span>2026/12/12 過期</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xxl-6">
+                                    <div class="coupon" data-style="none">
+                                        <div class="row gx-0">
+                                            <div class="col-sm-4">
+                                                <div class="coupon-header">
+                                                    <p>50元</p>
+                                                    <span><img src="./assets/images/ic-truck.svg" alt="icon"
+                                                            class="me-2">運費折抵券</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <div class="coupon-con">
+                                                    <div class="coupon-con-txt">
+                                                        <h3 class="coupon-con-title">桃園農會超市通用券</h3>
+                                                        <p>無門檻限制，全額可抵</p>
+                                                        <span>22026/12/12 過期</span>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
