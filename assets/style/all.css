@@ -30493,7 +30493,7 @@ button.swiper-pagination-bullet {
 .side-menu {
   position: fixed;
   width: 250px;
-  height: calc(100dvh - 142px);
+  height: calc(100dvh - 140px);
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -webkit-transition: all 0.2s ease;
