@@ -33935,6 +33935,34 @@ a.file-list-item:hover {
 .coupon[data-style=none] .coupon-con span {
   color: #9C9C9C;
 }
+.coupon[data-style=done] .coupon-con {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 576px) {
+  .coupon[data-style=done] .coupon-con {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.coupon[data-style=done] .coupon-con-txt {
+  margin-right: 0;
+}
+@media (min-width: 576px) {
+  .coupon[data-style=done] .coupon-con-txt {
+    margin-right: 16px;
+  }
+}
 .coupon-header {
   background: #FF4D7D;
   color: #fff;
@@ -34043,10 +34071,24 @@ a.file-list-item:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-right: 16px;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .coupon-con-txt {
+    width: auto;
+  }
 }
 .coupon-con-pic {
-  width: 68px;
-  height: 68px;
+  width: 48px;
+  height: 48px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media (min-width: 768px) {
+  .coupon-con-pic {
+    width: 68px;
+    height: 68px;
+  }
 }
 .coupon-con p {
   color: #495057;
