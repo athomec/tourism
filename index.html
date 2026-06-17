@@ -195,9 +195,27 @@
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous"
 	src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v23.0&appId=2357321167852272">
-	</script>
+</script>
 
 <!--內容區塊開始-->
+<div class="modal fade popup" id="popup" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<button type="button" data-bs-dismiss="modal" class="btn close-btn" title="關閉">
+				<img src="./assets/images/ic-close-modal.svg" alt="icon">
+			</button>
+			<img src="./assets/images/popup-banner.png" alt="banner" class="popup-pic">
+			<div class="modal-body bg-white text-center">
+				線上母親節強檔！ 2026/5/5~2026/5/20<br>
+				為您提供各式各樣精選好禮，折扣領券拿不完！
+			</div>
+			<div class="modal-footer pt-0 pb-4">
+				<button type="button" class="modal-btn btn btn-primary-dark text-white px-5" title="去搶購">去搶購</button>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div style="min-height: 300px;">
 	<div class="banner">
 		<div class="banner-top"><img src="./assets/images/banner-top.png" alt="插圖"></div>
@@ -506,7 +524,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<section class="section container d-flex flex-column">
 		<h2 class="section-home-title">最新消息<span>NEWS</span></h2>
 		<div class="d-flex flex-column flex-lg-row align-items-center align-items-lg-start">
@@ -994,6 +1012,11 @@
 <script src="assets/js/script.js"></script><!--自訂-->
 <script>
     $(function () {
+        //------首頁popup'
+        var myModalElement = document.getElementById('popup');
+      var myModal = new bootstrap.Modal(myModalElement);
+      myModal.show();
+      
         //----------------輪播
          $('.js-banner').slick({
             slidesToShow: 1,

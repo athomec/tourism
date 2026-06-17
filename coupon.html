@@ -691,6 +691,11 @@
 <script src="assets/js/script.js"></script><!--自訂-->
 <script>
     $(function () {
+        //------首頁popup'
+        var myModalElement = document.getElementById('popup');
+      var myModal = new bootstrap.Modal(myModalElement);
+      myModal.show();
+      
         //----------------輪播
          $('.js-banner').slick({
             slidesToShow: 1,

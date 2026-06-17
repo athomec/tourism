@@ -34187,6 +34187,168 @@ a.file-list-item:hover {
   color: #659E52;
 }
 
+.popup .modal-dialog {
+  overflow: initial;
+  width: 90%;
+  max-width: 625px;
+}
+.popup .modal-content {
+  position: relative;
+  overflow: initial;
+}
+.popup .modal-content:before {
+  content: "";
+  width: 100%;
+  height: 50%;
+  max-height: 296px;
+  border-radius: 20px 20px 0 0;
+  /* 支援舊版瀏覽器 */
+  background: #FF88A9;
+  /* 先進瀏覽器：由上到下 (0% 到 100%) */
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFE5EC), to(#FF88A9));
+  background: -o-linear-gradient(top, #FFE5EC 0%, #FF88A9 100%);
+  background: linear-gradient(to bottom, #FFE5EC 0%, #FF88A9 100%);
+  margin-bottom: 64px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .popup .modal-content:before {
+    position: relative;
+    height: 296px;
+  }
+}
+.popup .modal-body {
+  font-size: 1rem;
+}
+.popup .modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.popup .modal-btn {
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.popup-pic {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  margin-top: 24px;
+}
+@media (min-width: 768px) {
+  .popup-pic {
+    position: absolute;
+    width: 656px;
+    height: 402px;
+    right: 0;
+    top: -48px;
+    margin-top: 0;
+  }
+}
+.popup .close-btn {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  z-index: 100;
+  width: 40px;
+}
+@media (min-width: 768px) {
+  .popup .close-btn {
+    right: 12px;
+    top: 12px;
+    width: 50px;
+  }
+}
+.popup .modal-footer {
+  border-radius: 0 0 20px 20px;
+  border: 0;
+}
+
+.cart-popup .modal-dialog {
+  width: 90%;
+  max-width: 560px;
+}
+.cart-popup .modal-header {
+  border-bottom: 1px solid #FF88A9;
+  padding-bottom: 4px;
+  position: relative;
+}
+.cart-popup .close-btn {
+  position: absolute;
+  right: -4px;
+  padding: 8px;
+}
+.cart-popup .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.cart-popup .modal-code {
+  max-width: 170px;
+}
+.cart-popup .modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  border: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (min-width: 576px) {
+  .cart-popup .modal-footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+.cart-popup .modal-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .cart-popup .modal-action {
+    width: auto;
+  }
+}
+.cart-popup .modal-action button {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .cart-popup .modal-action button {
+    width: auto;
+  }
+}
+
 /*無障礙設定*/
 #gotocenter {
   /*跳轉到主內容*/

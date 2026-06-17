@@ -192,6 +192,38 @@
 					title="網頁主要內容資料區">:::</a>	
 					<main class="main">			
 				<!--內容區塊開始-->
+<div class="modal fade cart-popup" tabindex="-1" aria-hidden="true" id="cart-popup">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content px-3">
+            <div class="modal-header px-0 mx-3">
+                三奇蜜蜂生態農園
+                <button type="button" data-bs-dismiss="modal" class="btn close-btn" title="關閉">
+                    <img src="./assets/images/ic-close-modal.svg" alt="icon">
+                </button>
+            </div>
+			<div class="modal-body bg-white text-center">
+				<p class="mb-3 fs-6">
+                    匯款帳號：(123)123456789123
+                </p>
+                <img src="./assets/images/pay.svg" alt="qrcode" class="modal-code mb-2">
+                <div class="d-flex align-items-center fs-6 text-tertiary mb-4">
+                    <img src="./assets/images/ic-arrow-up.svg" alt="icon" class="me-1">
+                    付款QR code
+                </div>
+                <div class="bg-bright p-2 fs-6 mb-2 rounded-3 w-100 fw-bold">
+                    訂單總金額(含運費) NT$ <span class="text-primary-dark fs-3">600</span>
+                </div>
+                <div class="modal-footer px-0">
+                    <input class="form-control border-primary-xdark w-100 me-2 flex-shrink-1 mb-2 mb-sm-0" type="text" placeholder="請輸入匯款帳號後五碼" title="請輸入匯款帳號後五碼">
+                    <div class="modal-action">
+                        <button type="button" class="modal-btn btn btn-primary-dark text-white px-4 me-2">送出</button>
+				<button type="button" class="modal-btn btn btn-gray-600 text-white px-4">返回</button>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <div class="breadcrumb-bg">
     <div class="container">
@@ -741,7 +773,7 @@
                 </div>
                 <div class="d-flex">
                     <a href="#" class="btn btn-tertiary text-white rounded-pill px-3 px-sm-4 py-2 me-2"
-                        title="送出訂單">送出訂單</a>
+                        title="送出訂單" data-bs-toggle="modal" data-bs-target="#cart-popup">送出訂單</a>
                 </div>
             </div>
             <ul class="step mt-4">
@@ -1125,6 +1157,11 @@
 <script src="assets/js/script.js"></script><!--自訂-->
 <script>
     $(function () {
+        //------首頁popup'
+        var myModalElement = document.getElementById('popup');
+      var myModal = new bootstrap.Modal(myModalElement);
+      myModal.show();
+      
         //----------------輪播
          $('.js-banner').slick({
             slidesToShow: 1,
